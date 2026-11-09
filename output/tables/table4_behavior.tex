@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\caption{Extended Behavioral Diagnostics on 64 Firms}
+\label{tab:behavior}
+\begin{threeparttable}
+\begin{tabular}{lrr}
+\toprule
+Diagnostic & Estimate (pp) & 95\% CI / auxiliary statistic \\
+\midrule
+Six-order within-firm range, median & 15.50 & Mean pairwise difference 8.13 \\
+Adverse vs neutral unsupported text & 3.00 & [2.23, 3.78] \\
+Favorable vs neutral unsupported text & -0.12 & [-0.76, 0.52] \\
+Text after vs before facts & 6.37 & [4.56, 8.17] \\
+Text in system vs before facts & 0.90 & [-0.66, 2.46] \\
+Joint deterioration & 29.33 & Direction violations 0.0\% \\
+Joint improvement & -13.97 & Direction violations 4.3\% \\
+ROA deterioration & -0.31 & Direction violations 58.3\% \\
+Cash deterioration & -0.88 & Direction violations 84.6\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item Notes: The information experiment is a balanced $3\times3\times3$ factorial (valence, wording, placement) on every firm. Coefficients come from case fixed effects with firm-clustered standard errors. Economic direction violations are conditional on a changed output; sales-growth shocks have no imposed global sign and are omitted here.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

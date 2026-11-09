@@ -1,0 +1,11 @@
+\begin{table}[!htbp]\centering
+\caption{Repeatability and Implementation-Context Diagnostics}\label{tab:a_implementation}
+\resizebox{\textwidth}{!}{\begin{tabular}{lrrrr}\toprule
+Comparison & Calls & Changed (\%) & Mean absolute change & Maximum change \\
+\midrule
+Fresh reload, same artifact and batch & 192 & 0.00 & 0.00 & 0.0 \\ 
+Batch size 1 versus 8 & 192 & 7.29 & 0.52 & 14.0 \\ 
+Qwen3-4B 4-bit versus bfloat16 & 192 & 54.17 & 7.10 & 50.0 \\ 
+\bottomrule\end{tabular}}
+\begin{minipage}{0.94\textwidth}\footnotesize\textit{Notes:} All comparisons are prompt-matched. Fresh reload achieves 100\% raw-string equality. Batch and precision comparisons are properties of the tested MLX artifacts, not general engine effects.\end{minipage}
+\end{table}

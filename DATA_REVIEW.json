@@ -5,7 +5,7 @@
   "author": "Sun <316636681+mumuaitutu519-cyber@users.noreply.github.com>",
   "source_reference_zip": "RM_Replication_20261106_public.zip",
   "baseline_sha256": "6fe7ed7ee065ca0be2400510e3fb1dc5f68565cd423edad9991793b43d0ffd3a",
-  "policy": "Code and schema plus unchanged author-supplied manuscript PDF. No observation data, prompts, replies, scores, predictions, frozen draws, case audits, numerical output snapshots or logs.",
+  "policy": "Code/schema and unchanged manuscript PDF plus screened aggregate table/figure values and verification. No newly published company/call observations, prompt text, replies, individual predictions or bootstrap draws. All CSVs have at most 500 data rows; conservative stkcd/code/firm/case_id/prompt/response column-name filter.",
   "retained_source_paths": [
     ".gitignore",
     "PACKAGE.json",
@@ -35,6 +35,81 @@
     "code/verify_sun21.py",
     "data/DATA_DICTIONARY.csv",
     "data/benchmark_config.json",
+    "output/analysis/screening_workload.csv",
+    "output/analysis/strict_timing_artifact_profiles.csv",
+    "output/analysis/strict_timing_artifact_variant_metrics.csv",
+    "output/analysis/strict_timing_auc_difference_ci.csv",
+    "output/analysis/strict_timing_batch_sensitivity.csv",
+    "output/analysis/strict_timing_calibration_coefficients.csv",
+    "output/analysis/strict_timing_calibration_robustness.csv",
+    "output/analysis/strict_timing_descriptives.csv",
+    "output/analysis/strict_timing_economic_response.csv",
+    "output/analysis/strict_timing_extended_paired_summary.csv",
+    "output/analysis/strict_timing_forward_time_historical_bss.csv",
+    "output/analysis/strict_timing_information_fe_coefficients.csv",
+    "output/analysis/strict_timing_information_margins.csv",
+    "output/analysis/strict_timing_order_summary.csv",
+    "output/analysis/strict_timing_output_precision.csv",
+    "output/analysis/strict_timing_primary_bootstrap_ci.csv",
+    "output/analysis/strict_timing_primary_metrics.csv",
+    "output/analysis/strict_timing_primary_range_summary.csv",
+    "output/analysis/strict_timing_primary_rosters.csv",
+    "output/analysis/strict_timing_probability_bootstrap_ci.csv",
+    "output/analysis/strict_timing_probability_metrics.csv",
+    "output/analysis/strict_timing_probability_periods.csv",
+    "output/analysis/strict_timing_quantization_sensitivity.csv",
+    "output/analysis/strict_timing_regulatory_signal_validation.csv",
+    "output/analysis/strict_timing_reliability_bins.csv",
+    "output/analysis/strict_timing_reload_repeatability.csv",
+    "output/analysis/strict_timing_temporal_bootstrap_ci.csv",
+    "output/analysis/strict_timing_threshold_crossing_curve.csv",
+    "output/figures/strict_timing/figure_annual_regime.pdf",
+    "output/figures/strict_timing/figure_annual_regime.png",
+    "output/figures/strict_timing/figure_artifact_profiles.pdf",
+    "output/figures/strict_timing/figure_artifact_profiles.png",
+    "output/figures/strict_timing/figure_reliability.pdf",
+    "output/figures/strict_timing/figure_reliability.png",
+    "output/figures/strict_timing/figure_representation_range.pdf",
+    "output/figures/strict_timing/figure_representation_range.png",
+    "output/figures/strict_timing/figure_threshold_crossing.pdf",
+    "output/figures/strict_timing/figure_threshold_crossing.png",
+    "output/tables/Table_1_object_1.csv",
+    "output/tables/Table_2_object_2.csv",
+    "output/tables/Table_3_object_3.csv",
+    "output/tables/Table_4_object_4.csv",
+    "output/tables/Table_5_object_5.csv",
+    "output/tables/Table_6_object_6.csv",
+    "output/tables/Table_A10_object_16.csv",
+    "output/tables/Table_A11_object_17.csv",
+    "output/tables/Table_A12_object_18.csv",
+    "output/tables/Table_A13_object_19.csv",
+    "output/tables/Table_A1_object_7.csv",
+    "output/tables/Table_A2_object_8.csv",
+    "output/tables/Table_A3_object_9.csv",
+    "output/tables/Table_A4_object_10.csv",
+    "output/tables/Table_A5_object_11.csv",
+    "output/tables/Table_A6_object_12.csv",
+    "output/tables/Table_A8_object_14.csv",
+    "output/tables/Table_A9_object_15.csv",
+    "output/tables/table1_sample.tex",
+    "output/tables/table2_performance.tex",
+    "output/tables/table3_stability.tex",
+    "output/tables/table4_behavior.tex",
+    "output/tables/table5_artifacts.tex",
+    "output/tables/table6_temporal.tex",
+    "output/tables/tableA10_economic.tex",
+    "output/tables/tableA11_precision.tex",
+    "output/tables/tableA1_descriptives.tex",
+    "output/tables/tableA2_annual.tex",
+    "output/tables/tableA3_extended.tex",
+    "output/tables/tableA4_temporal.tex",
+    "output/tables/tableA5_calibration.tex",
+    "output/tables/tableA6_washout.tex",
+    "output/tables/tableA7_auc_differences.tex",
+    "output/tables/tableA8_implementation.tex",
+    "output/tables/tableA9_information.tex",
+    "output/tables/table_regulatory_signal_validation.tex",
+    "output/tables/table_status_reason_decomposition.tex",
     "paper/RMSunChenRyu2026.11.09_sun21.pdf",
     "raw_rebuild/07_run_revision_llm_audit.py",
     "raw_rebuild/36_build_strict_timing_panel.py",
@@ -49,7 +124,9 @@
     "raw_rebuild/verify_package_sun15.py",
     "requirements.txt",
     "run_all.py",
-    "run_all.sh"
+    "run_all.sh",
+    "verify/FIGURE_VERIFICATION_sun21.csv",
+    "verify/VERIFICATION_SUMMARY_sun21.md"
   ],
   "excluded_source_paths": [
     {
@@ -133,67 +210,67 @@
     {
       "path": "data/derived/strict_timing_complete_candidates_2011_2024.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/derived/strict_timing_nested_cases_64.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/derived/strict_timing_panel_2011_2024.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/derived/strict_timing_primary_cases_256.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/derived/strict_timing_probability_cases_1500.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/derived/strict_timing_st_changes.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/frozen_draws/strict_timing_primary_bootstrap_draws.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/frozen_draws/strict_timing_probability_bootstrap_draws.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/frozen_draws/strict_timing_temporal_bootstrap_draws.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/strict_timing_benchmark_holdout_predictions.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "data/strict_timing_prelandmark_regulatory_features.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
@@ -253,325 +330,157 @@
     {
       "path": "output/analysis/DATA_DICTIONARY.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/screening_workload.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Schema inventory, not aggregate statistics; the existing data/DATA_DICTIONARY.csv remains available.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_annual_frame.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_artifact_case_ranges.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_artifact_profiles.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_artifact_variant_metrics.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_auc_difference_ci.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_batch_sensitivity.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_benchmark_holdout_predictions.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_calibration_coefficients.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_calibration_robustness.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_core_mistral_nemo_12b_4bit_batch1.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_core_qwen3_4b_4bit_batch1.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_core_qwen3_4b_4bit_batch1_reload.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_core_qwen3_4b_fp16_batch1.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_core_qwen3_8b_4bit_batch1.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_descriptives.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_economic_response.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_extended_paired_summary.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_extended_qwen3_4b_4bit.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_forward_time_historical_bss.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 1920 data rows, above the 500-row release limit.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_information_factorial_missing_qwen3_4b_4bit.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 1152 data rows, above the 500-row release limit.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_information_factorial_panel.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_information_fe_coefficients.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_information_margins.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_order_case_metrics.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_order_summary.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_output_precision.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_prelandmark_regulatory_features.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_primary_bootstrap_ci.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_primary_bootstrap_draws.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_primary_case_ranges.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_primary_metrics.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_primary_qwen3_4b_4bit.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_primary_range_summary.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_primary_rosters.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_probability_bootstrap_ci.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 768 data rows, above the 500-row release limit.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_probability_bootstrap_draws.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_probability_metrics.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_probability_periods.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_probability_predictions.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_probability_qwen3_4b_4bit.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_quantization_sensitivity.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 4500 data rows, above the 500-row release limit.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_regulatory_event_linkage.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_regulatory_signal_validation.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_reliability_bins.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_reload_repeatability.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: firm_id; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_sample_summary.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_status_reason_decomposition.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_temporal_bootstrap_ci.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: reason_code; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_temporal_bootstrap_draws.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/analysis/strict_timing_threshold_crossing_curve.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/strict_timing_washout_risksets.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/analysis/sun21_independent_capacity_bootstrap_draws.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "CSV has 6000 data rows, above the 500-row release limit. Individual bootstrap draw rows are restricted; interval summaries are allowed.",
       "public_baseline_path_present": false
     },
     {
@@ -588,66 +497,6 @@
     },
     {
       "path": "output/computed_cells.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_annual_regime.pdf",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_annual_regime.png",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_artifact_profiles.pdf",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_artifact_profiles.png",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_reliability.pdf",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_reliability.png",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_representation_range.pdf",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_representation_range.png",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_threshold_crossing.pdf",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/figures/strict_timing/figure_threshold_crossing.png",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
       "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
       "public_baseline_path_present": false
@@ -691,235 +540,13 @@
     {
       "path": "output/model_calls.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_1_object_1.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_2_object_2.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_3_object_3.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_4_object_4.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_5_object_5.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_6_object_6.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A10_object_16.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A11_object_17.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A12_object_18.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A13_object_19.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A1_object_7.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A2_object_8.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A3_object_9.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A4_object_10.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A5_object_11.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A6_object_12.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "output/tables/Table_A7_object_13.csv",
       "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A8_object_14.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/Table_A9_object_15.csv",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/table1_sample.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/table2_performance.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/table3_stability.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/table4_behavior.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/table5_artifacts.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/table6_temporal.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA10_economic.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA11_precision.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA1_descriptives.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA2_annual.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA3_extended.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA4_temporal.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA5_calibration.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA6_washout.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA7_auc_differences.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA8_implementation.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/tableA9_information.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/table_regulatory_signal_validation.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "output/tables/table_status_reason_decomposition.tex",
-      "category": "licensed_source_aggregate_results_or_execution_evidence",
-      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "reason": "Contains actual unsupported-text prompt templates; Table A7 has no numerical statistics.",
       "public_baseline_path_present": false
     },
     {
@@ -1075,31 +702,31 @@
     {
       "path": "raw_rebuild/strict_timing_extended_prompts_64.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "raw_rebuild/strict_timing_information_factorial_missing_prompts.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "raw_rebuild/strict_timing_nested_core_prompts_64.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "raw_rebuild/strict_timing_primary_prompts_256.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
       "path": "raw_rebuild/strict_timing_probability_prompts_1500.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
@@ -1116,12 +743,6 @@
     },
     {
       "path": "verify/FIGURE_VERIFICATION.csv",
-      "category": "packaging_and_audit_documentation",
-      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
-      "public_baseline_path_present": false
-    },
-    {
-      "path": "verify/FIGURE_VERIFICATION_sun21.csv",
       "category": "packaging_and_audit_documentation",
       "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
       "public_baseline_path_present": false
@@ -1151,12 +772,6 @@
       "public_baseline_path_present": false
     },
     {
-      "path": "verify/MISMATCH_REPORT_sun21.md",
-      "category": "packaging_and_audit_documentation",
-      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
-      "public_baseline_path_present": false
-    },
-    {
       "path": "verify/SECURITY_SCAN_sun21.json",
       "category": "packaging_and_audit_documentation",
       "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
@@ -1169,15 +784,9 @@
       "public_baseline_path_present": false
     },
     {
-      "path": "verify/VERIFICATION_SUMMARY_sun21.md",
-      "category": "packaging_and_audit_documentation",
-      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
-      "public_baseline_path_present": false
-    },
-    {
       "path": "verify/VERIFICATION_sun21.csv",
       "category": "packaging_and_audit_documentation",
-      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "reason": "CSV has 793 data rows, above the 500-row release limit. Also contains six individual-example score/probability records. Publish unchanged eligible records by table instead.",
       "public_baseline_path_present": false
     },
     {
@@ -1201,7 +810,7 @@
     {
       "path": "verify/figures/manuscript_vintage_strict_timing_primary_case_ranges.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
@@ -1231,7 +840,7 @@
     {
       "path": "verify/figures/recomputed_strict_timing_primary_case_ranges.parquet",
       "category": "licensed_source_derived_observations_or_replies",
-      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "reason": "Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed.",
       "public_baseline_path_present": false
     },
     {
@@ -1627,17 +1236,1709 @@
   ],
   "rewritten_source_paths": [
     "README.md",
-    "README_한국어.md"
+    "README_한국어.md",
+    "verify/MISMATCH_REPORT_sun21.md"
   ],
   "generated_public_documentation": [
+    "CHECKSUMS.sha256",
     "DATA_REVIEW.json",
     "EXCLUDED_FILES.md",
     "MANIFEST.csv",
-    "CHECKSUMS.sha256"
+    "verify/MISMATCH_REPORT_sun21.md",
+    "verify/VERIFICATION_sun21/Body.csv",
+    "verify/VERIFICATION_sun21/README.md",
+    "verify/VERIFICATION_sun21/Table_1.csv",
+    "verify/VERIFICATION_sun21/Table_2.csv",
+    "verify/VERIFICATION_sun21/Table_3.csv",
+    "verify/VERIFICATION_sun21/Table_4.csv",
+    "verify/VERIFICATION_sun21/Table_5.csv",
+    "verify/VERIFICATION_sun21/Table_6.csv",
+    "verify/VERIFICATION_sun21/Table_A1.csv",
+    "verify/VERIFICATION_sun21/Table_A10.csv",
+    "verify/VERIFICATION_sun21/Table_A11.csv",
+    "verify/VERIFICATION_sun21/Table_A12.csv",
+    "verify/VERIFICATION_sun21/Table_A13.csv",
+    "verify/VERIFICATION_sun21/Table_A2.csv",
+    "verify/VERIFICATION_sun21/Table_A3.csv",
+    "verify/VERIFICATION_sun21/Table_A4.csv",
+    "verify/VERIFICATION_sun21/Table_A5.csv",
+    "verify/VERIFICATION_sun21/Table_A6.csv",
+    "verify/VERIFICATION_sun21/Table_A7.csv",
+    "verify/VERIFICATION_sun21/Table_A8.csv",
+    "verify/VERIFICATION_sun21/Table_A9.csv"
   ],
   "licensed_original_exports_distributed": false,
   "licensed_company_level_derivatives_distributed": false,
   "paper_sha256": "a9074cab5116099d0bd72cedab8301f412e7ec87bfabb833d4f2065d9801489b",
   "model_inference_rerun": false,
-  "statistical_results_changed": false
+  "statistical_results_changed": false,
+  "aggregate_release_342": {
+    "created_utc": "2026-11-09T12:51:18.382788+00:00",
+    "decisions": [
+      {
+        "path": "TABLE_FIGURE_MAP_sun21.csv",
+        "bytes": 4748,
+        "sha256": "af1dc32902eb83d49c8ace752d418946c7b2a3f9d4063c728882e378e7e8cd52",
+        "columns": [
+          "sun21_label",
+          "old_sun15_label",
+          "sun21_object",
+          "old_object",
+          "caption",
+          "mapping_evidence",
+          "script",
+          "data"
+        ],
+        "rows": 24,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/DATA_DICTIONARY.csv",
+        "bytes": 194788,
+        "sha256": "07ec45802abfad8224c04476a439fe723fb5f668732953237c8833e04ec80fb5",
+        "columns": [
+          "file",
+          "variable",
+          "dtype",
+          "grain",
+          "rows",
+          "description",
+          "missing_value",
+          "license"
+        ],
+        "rows": 499,
+        "action": "excluded",
+        "reason": "Schema inventory, not aggregate statistics; the existing data/DATA_DICTIONARY.csv remains available."
+      },
+      {
+        "path": "output/analysis/screening_workload.csv",
+        "bytes": 954,
+        "sha256": "e5a2cb879b8b0348bcda84fa3a8d4ce61bf3125dbd9d136b743b51e3255d136a",
+        "columns": [
+          "kind",
+          "score",
+          "threshold",
+          "flagged",
+          "capture",
+          "precision",
+          "auc",
+          "capture5",
+          "capture10"
+        ],
+        "rows": 10,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_annual_frame.csv",
+        "bytes": 1148,
+        "sha256": "96cb8d7e049f4651c113aff9bc6f42ce06c620c743f77e51ffba85738a61cd3f",
+        "columns": [
+          "fiscal_year",
+          "records",
+          "firms",
+          "events",
+          "event_rate",
+          "logit_auc",
+          "logit_pr_auc",
+          "hist_gradient_boosting_auc",
+          "hist_gradient_boosting_pr_auc",
+          "xgboost_auc",
+          "xgboost_pr_auc",
+          "regime"
+        ],
+        "rows": 6,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_artifact_profiles.csv",
+        "bytes": 547,
+        "sha256": "00850c33229ea0e4573c42ced5041c5250349d00bae3322cbea0d1fd7b0c8a91",
+        "columns": [
+          "artifact",
+          "cases",
+          "events",
+          "parse_rate",
+          "canonical_auc",
+          "canonical_pr_auc",
+          "median_representation_range_pp",
+          "mean_representation_range_pp",
+          "any_representation_change_rate",
+          "maximum_representation_range_pp"
+        ],
+        "rows": 4,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_artifact_variant_metrics.csv",
+        "bytes": 1077,
+        "sha256": "b140727630f3e4a1eacbc1dc9448601dfd16a298d973fd8e12cb2058d5c492e7",
+        "columns": [
+          "artifact",
+          "variant",
+          "mean_score",
+          "roc_auc",
+          "pr_auc",
+          "unique_scores"
+        ],
+        "rows": 12,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_auc_difference_ci.csv",
+        "bytes": 360,
+        "sha256": "64e855a6d08d2b2450fd42d3ea70a7c04cccc42e2e3da19cc0658989f1296a28",
+        "columns": [
+          "contrast",
+          "bootstrap_draws",
+          "mean_difference",
+          "ci_lower",
+          "ci_upper",
+          "share_positive"
+        ],
+        "rows": 3,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_batch_sensitivity.csv",
+        "bytes": 126,
+        "sha256": "73717c0eedbbda8e7b315c23584f72f27902e2b3877797b9dd4df754b8fda1b1",
+        "columns": [
+          "calls",
+          "changed_rate",
+          "mean_absolute_difference_pp",
+          "maximum_absolute_difference_pp"
+        ],
+        "rows": 1,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_calibration_coefficients.csv",
+        "bytes": 5198,
+        "sha256": "e2694d9a2b48851b435fc82e18cd735195157eff0fe141ce86b581fea369336c",
+        "columns": [
+          "score",
+          "evaluation",
+          "fold",
+          "intercept",
+          "slope",
+          "calibration_n",
+          "evaluation_n",
+          "calibration_source"
+        ],
+        "rows": 48,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_calibration_robustness.csv",
+        "bytes": 3407,
+        "sha256": "8563c3dcdaa8580d524afebe84af757fa47fcf02bdf90123fe645a12761635b3",
+        "columns": [
+          "score",
+          "calibration",
+          "weighted_event_rate",
+          "weighted_mean_probability",
+          "roc_auc",
+          "pr_auc",
+          "brier",
+          "brier_skill_score",
+          "log_loss",
+          "pooled_calibration_intercept",
+          "pooled_calibration_slope"
+        ],
+        "rows": 16,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_core_mistral_nemo_12b_4bit_batch1.csv",
+        "bytes": 26131,
+        "sha256": "1e4cdd702d21f5a66b245ae0d4ebe857af9e180ca9946d207d8008fbf86a0218",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 192,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_core_qwen3_4b_4bit_batch1.csv",
+        "bytes": 24595,
+        "sha256": "b5809ef9dc11309f93eb7cf7e5cea619fd45a6650059b39a3559f0a993ae272b",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 192,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_core_qwen3_4b_4bit_batch1_reload.csv",
+        "bytes": 24595,
+        "sha256": "b5809ef9dc11309f93eb7cf7e5cea619fd45a6650059b39a3559f0a993ae272b",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 192,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_core_qwen3_4b_fp16_batch1.csv",
+        "bytes": 24599,
+        "sha256": "b07ddd0ea5f8bff4b1d2a143a2da14ca5a292521ab548c564019445962dd7872",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 192,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_core_qwen3_8b_4bit_batch1.csv",
+        "bytes": 24611,
+        "sha256": "5ab2a5335773780aac444163c28e8b9aeff4e7e5a710e13a5c2f60a6fc964f40",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 192,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_descriptives.csv",
+        "bytes": 4399,
+        "sha256": "c1b42c46fe92b3ff5193195d1b7308b231dfba383eb14443b85752768fab9a89",
+        "columns": [
+          "variable",
+          "sample",
+          "mean",
+          "standard_deviation",
+          "p25",
+          "median",
+          "p75"
+        ],
+        "rows": 40,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_economic_response.csv",
+        "bytes": 1125,
+        "sha256": "88b7cad2fb2fd1a440d90c90eb5164f1fbaaf488ae7f2b08acbe9fedae610512",
+        "columns": [
+          "variant",
+          "expected_direction",
+          "mean_delta_pp",
+          "median_delta_pp",
+          "changed_rate",
+          "mean_delta_when_changed_pp",
+          "direction_violation_rate_all",
+          "direction_violation_rate_when_changed",
+          "maximum_reverse_change_pp",
+          "marginal_training_support_rate"
+        ],
+        "rows": 10,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_extended_paired_summary.csv",
+        "bytes": 3255,
+        "sha256": "3fefa692fda8925f28cab489545b897f76cdfc4d20c497686f8a490e63d3a75b",
+        "columns": [
+          "variant",
+          "n",
+          "mean_delta_pp",
+          "mean_delta_ci_lower",
+          "mean_delta_ci_upper",
+          "median_delta_pp",
+          "mean_absolute_delta_pp",
+          "mean_absolute_delta_ci_lower",
+          "mean_absolute_delta_ci_upper",
+          "changed_rate",
+          "maximum_absolute_delta_pp"
+        ],
+        "rows": 30,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_extended_qwen3_4b_4bit.csv",
+        "bytes": 250131,
+        "sha256": "d3186cedad6287416d5ae6f834c2e8aefc59755c2e1c4a77592c5dc71e73c7ed",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 1920,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 1920 data rows, above the 500-row release limit."
+      },
+      {
+        "path": "output/analysis/strict_timing_forward_time_historical_bss.csv",
+        "bytes": 4736,
+        "sha256": "2eb060784263ed276ddf4851427d160fa618d309c22f315b1b6faefd4a900c72",
+        "columns": [
+          "score",
+          "evaluation_year",
+          "evaluation_n",
+          "evaluation_events",
+          "historical_event_rate",
+          "evaluation_event_rate",
+          "mean_prediction",
+          "roc_auc",
+          "pr_auc",
+          "model_brier",
+          "bss_vs_historical_rate",
+          "bss_vs_evaluation_rate"
+        ],
+        "rows": 24,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_information_factorial_missing_qwen3_4b_4bit.csv",
+        "bytes": 171411,
+        "sha256": "de35dc69f97c8c40254e3a680aab167642dd6fbea40d08207af72501fbd5ae1a",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 1152,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 1152 data rows, above the 500-row release limit."
+      },
+      {
+        "path": "output/analysis/strict_timing_information_fe_coefficients.csv",
+        "bytes": 901,
+        "sha256": "6d1028fb68d81511927264d8d52836aa2a2d891583c5e8066fe777d21df29133",
+        "columns": [
+          "term",
+          "estimate_pp",
+          "standard_error",
+          "p_value",
+          "ci_lower",
+          "ci_upper"
+        ],
+        "rows": 6,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_information_margins.csv",
+        "bytes": 743,
+        "sha256": "2f6a7a3fbe29783edb604dd69f55dbcea869f26f28d58251540561198bde4ed0",
+        "columns": [
+          "valence",
+          "placement",
+          "n",
+          "mean_delta_pp",
+          "median_delta_pp",
+          "mean_absolute_delta_pp",
+          "changed_rate"
+        ],
+        "rows": 9,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_order_summary.csv",
+        "bytes": 117,
+        "sha256": "d1c37154c7252659ed2b04680fca279a378b8f56440a494f4583eadf905430eb",
+        "columns": [
+          "forms",
+          "median_order_range_pp",
+          "mean_order_range_pp",
+          "mean_pairwise_order_difference_pp"
+        ],
+        "rows": 1,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_output_precision.csv",
+        "bytes": 1340,
+        "sha256": "c0b29d96dedc21b22f9e67054e341cefe9fcd66594865f62196d476edd2f9e69",
+        "columns": [
+          "variant",
+          "n",
+          "unique_scores",
+          "integer_output_rate",
+          "minimum_score",
+          "maximum_score"
+        ],
+        "rows": 31,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_primary_bootstrap_ci.csv",
+        "bytes": 380,
+        "sha256": "b60c2ab36084c44cf6a510063967f2678d32d7bbd9d281246bd7e9f25b4a9814",
+        "columns": [
+          "result",
+          "metric",
+          "bootstrap_draws",
+          "bootstrap_mean",
+          "ci_lower",
+          "ci_upper"
+        ],
+        "rows": 4,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_primary_metrics.csv",
+        "bytes": 343,
+        "sha256": "056b1efffaaa662aa759d01e86707fb3d7b1d2daf0f66d92872421e212dae3d6",
+        "columns": [
+          "variant",
+          "n",
+          "events",
+          "mean_score",
+          "median_score",
+          "unique_scores",
+          "integer_output_rate",
+          "roc_auc",
+          "pr_auc"
+        ],
+        "rows": 3,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_primary_qwen3_4b_4bit.csv",
+        "bytes": 97939,
+        "sha256": "4fcebe75a976ffccdc8d1b47253dae5078f0822a9977a19a68c9c9a725f95b1b",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 768,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 768 data rows, above the 500-row release limit."
+      },
+      {
+        "path": "output/analysis/strict_timing_primary_range_summary.csv",
+        "bytes": 119,
+        "sha256": "e14f322debef944c3863ba822c212dcf46e4e8a59d9f97f121cea984569fdabc",
+        "columns": [
+          "n",
+          "median_range_pp",
+          "mean_range_pp",
+          "p90_range_pp",
+          "maximum_range_pp",
+          "any_change_rate"
+        ],
+        "rows": 1,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_primary_rosters.csv",
+        "bytes": 470,
+        "sha256": "2b17ffc5052bec07bf592b7fdfa601fa9305c21a31230c9299968b77a6bb4f78",
+        "columns": [
+          "capacity",
+          "variant",
+          "top_n",
+          "selected_events",
+          "event_recall",
+          "intersection_all",
+          "union_all",
+          "jaccard_all"
+        ],
+        "rows": 8,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_probability_bootstrap_ci.csv",
+        "bytes": 2628,
+        "sha256": "073c4436c64ddbce853a23cbafa2f186cf990a99b47771ce787124c7368de3d1",
+        "columns": [
+          "score",
+          "metric",
+          "bootstrap_draws",
+          "bootstrap_mean",
+          "ci_lower",
+          "ci_upper"
+        ],
+        "rows": 26,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_probability_metrics.csv",
+        "bytes": 3306,
+        "sha256": "f119773df6718bda9fc2fc03683835e19b9983a4fd912398ea9070c23a3b2faa",
+        "columns": [
+          "score",
+          "evaluation",
+          "weighted_event_rate",
+          "weighted_mean_probability",
+          "roc_auc",
+          "pr_auc",
+          "brier",
+          "brier_skill_score",
+          "log_loss"
+        ],
+        "rows": 18,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_probability_periods.csv",
+        "bytes": 2222,
+        "sha256": "13e3410a63117d2f284093b176f4ebcf63255fc0a21e6dbe6e714d7622a1ceac",
+        "columns": [
+          "period",
+          "score",
+          "weighted_event_rate",
+          "weighted_mean_probability",
+          "roc_auc",
+          "pr_auc",
+          "brier",
+          "brier_skill_score",
+          "log_loss"
+        ],
+        "rows": 12,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_probability_qwen3_4b_4bit.csv",
+        "bytes": 587574,
+        "sha256": "ab16b1928082bc33423debd42001612f89dbfbb4149cd618c4d4b5663d88d8b8",
+        "columns": [
+          "run_id",
+          "case_id",
+          "model_key",
+          "variant",
+          "year",
+          "distress_f1",
+          "sampling_weight",
+          "accounting_pd",
+          "repeat_id",
+          "pd_percent",
+          "grade",
+          "decision",
+          "parse_pd",
+          "parse_full",
+          "raw_output"
+        ],
+        "rows": 4500,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 4500 data rows, above the 500-row release limit."
+      },
+      {
+        "path": "output/analysis/strict_timing_quantization_sensitivity.csv",
+        "bytes": 153,
+        "sha256": "dcc14a69be676ac25aca50535fa7484c4e9a70db6cb745036e356a7d7d058b9c",
+        "columns": [
+          "calls",
+          "changed_rate",
+          "mean_difference_pp",
+          "mean_absolute_difference_pp",
+          "maximum_absolute_difference_pp"
+        ],
+        "rows": 1,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_regulatory_event_linkage.csv",
+        "bytes": 46432,
+        "sha256": "bfd6131865902a9b467a18f3eb769040e3a06a37f62c8ff1462b6c173291d9ba",
+        "columns": [
+          "row_id",
+          "firm_id",
+          "fiscal_year",
+          "report_date",
+          "landmark_date",
+          "st_event_date",
+          "regime_exposed",
+          "prior_violation",
+          "violation_between_landmark_event",
+          "financial_violation_near_event",
+          "fraud_violation_near_event",
+          "inquiry_prior_landmark",
+          "inquiry_between_landmark_event"
+        ],
+        "rows": 474,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: firm_id; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_regulatory_signal_validation.csv",
+        "bytes": 1257,
+        "sha256": "9f03ef9dc7212f219e0dcfd547c1226358ca05814152334b0b5351b4c92dee9f",
+        "columns": [
+          "signal",
+          "label",
+          "exposed_records",
+          "exposed_events",
+          "unexposed_records",
+          "unexposed_events",
+          "event_rate_exposed",
+          "event_rate_unexposed",
+          "rate_difference",
+          "rate_difference_ci_low",
+          "rate_difference_ci_high",
+          "risk_ratio"
+        ],
+        "rows": 5,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_reliability_bins.csv",
+        "bytes": 2376,
+        "sha256": "25750f9c51313767898b5cf691fe2709bc1e29863942a954bf5856ac31bcbfdb",
+        "columns": [
+          "score",
+          "bin",
+          "records",
+          "unweighted_events",
+          "weighted_records",
+          "mean_prediction",
+          "observed_rate"
+        ],
+        "rows": 30,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_reload_repeatability.csv",
+        "bytes": 100,
+        "sha256": "558b226a5852d371600ced2c77dd4e8d77ffd59fa2ee054917bb676efd36c114",
+        "columns": [
+          "calls",
+          "raw_output_exact_match_rate",
+          "score_changed_rate",
+          "maximum_absolute_difference_pp"
+        ],
+        "rows": 1,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_sample_summary.csv",
+        "bytes": 391,
+        "sha256": "d4e6710badef23805ae34d9183fa2fd90444a5e16b044be6bb7cb5722de9ea55",
+        "columns": [
+          "sample",
+          "records_or_weighted_records",
+          "firms",
+          "events_or_weighted_events",
+          "event_rate"
+        ],
+        "rows": 5,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_status_reason_decomposition.csv",
+        "bytes": 956,
+        "sha256": "36fdbd9d96029e88bad9c0d8bf84be665797fac73af08ff22a012dd951e647a3",
+        "columns": [
+          "reason_code",
+          "reason",
+          "count_2019--2022",
+          "share_2019--2022",
+          "count_2023",
+          "share_2023",
+          "count_2024",
+          "share_2024"
+        ],
+        "rows": 10,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: reason_code; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/strict_timing_temporal_bootstrap_ci.csv",
+        "bytes": 1148,
+        "sha256": "9254917fdb65cb0082c23836114fb1d5140806f0d2a4bea9e01159170df28aa9",
+        "columns": [
+          "score",
+          "metric",
+          "bootstrap_draws",
+          "mean",
+          "ci_lower",
+          "ci_upper"
+        ],
+        "rows": 12,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_threshold_crossing_curve.csv",
+        "bytes": 944,
+        "sha256": "aea16d519c79085459621da98d03fb12be78fbc33cb0200c832ab63bc15a9fb3",
+        "columns": [
+          "threshold",
+          "unweighted_crossing_rate",
+          "design_weighted_crossing_rate"
+        ],
+        "rows": 20,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/analysis/strict_timing_washout_risksets.csv",
+        "bytes": 523,
+        "sha256": "cb81d542ae0643426350fe729e7e55ca6eff9b6a1177851459836662590f8d39",
+        "columns": [
+          "washout_days",
+          "period",
+          "records",
+          "firms",
+          "st_events",
+          "st_event_rate",
+          "composite_events",
+          "composite_event_rate"
+        ],
+        "rows": 6,
+        "action": "excluded",
+        "reason": "Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category."
+      },
+      {
+        "path": "output/analysis/sun21_independent_capacity_bootstrap_draws.csv",
+        "bytes": 236613,
+        "sha256": "5d6b31ff39615b09bd20bc947016faface08156b528a4017480c286687f0632a",
+        "columns": [
+          "draw",
+          "model",
+          "capacity",
+          "difference_pp"
+        ],
+        "rows": 6000,
+        "action": "excluded",
+        "reason": "CSV has 6000 data rows, above the 500-row release limit. Individual bootstrap draw rows are restricted; interval summaries are allowed."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_annual_regime.pdf",
+        "bytes": 18344,
+        "sha256": "2f924b320afbd564ab243b708ea48e4fd24ecf40b265263d23a32135774d5173",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_annual_regime.png",
+        "bytes": 109562,
+        "sha256": "49fe32ac51b8845b2d9bb5f1e1f3636b745f69989028fce1ef44465d215f5b26",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_artifact_profiles.pdf",
+        "bytes": 15078,
+        "sha256": "e63fcf90a85ab871ac30cea6836507cecad24362d1d97c25e7a4175614adf2d1",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_artifact_profiles.png",
+        "bytes": 73624,
+        "sha256": "f31da102b6334e0d05ea87c86c060730fee0f229c69fc2595119b3a097dac2a7",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_reliability.pdf",
+        "bytes": 18618,
+        "sha256": "3c1b039104dae1fdec6feaac15751ccfc03c800a34adfabbfc161145429600be",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_reliability.png",
+        "bytes": 136288,
+        "sha256": "add104496555e7a2889717be0bf07f7ed4ee8e1a45e51713624d882a506107a5",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_representation_range.pdf",
+        "bytes": 16472,
+        "sha256": "60eb64e2d4686d1923d5bfa69184d5617a0f96ed65e9acbcd964785084de6d9c",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_representation_range.png",
+        "bytes": 68232,
+        "sha256": "cf970fabfbda15cab89f0946f2bf549497b481c6d3450dffb7910939050ef1a2",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_threshold_crossing.pdf",
+        "bytes": 15278,
+        "sha256": "19f22e3bf564d1c519a84fef647c3d9328ce44d255bd7b56fb5c7dedca1c0f6d",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/figures/strict_timing/figure_threshold_crossing.png",
+        "bytes": 110729,
+        "sha256": "af2ebebf2eccad3d26d5b9cc420683c5e20aec844d5c9a4549863dfee3a80be5",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_1_object_1.csv",
+        "bytes": 8210,
+        "sha256": "9d4821ddfcb448ccef8fccb1a0f16a409c82514e1fcf3f20d7dfc97b094bfe98",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 40,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_2_object_2.csv",
+        "bytes": 8467,
+        "sha256": "f117af50727141a92f6ccd123711cc092c309261d8ed3ed0e01d749d632f5b5d",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 35,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_3_object_3.csv",
+        "bytes": 7401,
+        "sha256": "17580ad3a88a5a2a05a055a15736609511e818d3fe71f21a6f5daa897c95cf31",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 30,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_4_object_4.csv",
+        "bytes": 14751,
+        "sha256": "7725da4fb6eb2e7e383f5d55a33fdc12d2a46b0a6104bf11eadd3a3df9ed603d",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 62,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_5_object_5.csv",
+        "bytes": 7573,
+        "sha256": "4920012103483dec50303340a706275ab82745ece78eb78db99ad504248dfb60",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 30,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_6_object_6.csv",
+        "bytes": 6970,
+        "sha256": "3922589e03c26f44e40aa3897d2dfdb58bef0973935eced53ab3485c7460ad94",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 30,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A10_object_16.csv",
+        "bytes": 10446,
+        "sha256": "f5a8cdc0822aedc0bba2dd74f359993b25571a4e7b6edfcd01613820909bed42",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 44,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A11_object_17.csv",
+        "bytes": 15290,
+        "sha256": "8a238cee9f3854fe4b1d254423345a2f796d30509139312d4b57331f3a8e2452",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 64,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A12_object_18.csv",
+        "bytes": 2760,
+        "sha256": "c621784aca8dab197a7d8dcd1b32a50cdf0d593ecdc81f76a748888e9df2b8ee",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 12,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A13_object_19.csv",
+        "bytes": 4720,
+        "sha256": "3914f87e5913cd92e3ab69db593a3a94ff06b019e09fa307adb8b5695d695f48",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 20,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A1_object_7.csv",
+        "bytes": 11973,
+        "sha256": "40f5f870d201044eef3147aaf7023266f8ba267babd1433b58fbc62aae44762c",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 55,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A2_object_8.csv",
+        "bytes": 11513,
+        "sha256": "cf5dc38944e7b1e5bb3d383dff94d57a563a664ca75bd75fdfdb674a95f7112f",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 56,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A3_object_9.csv",
+        "bytes": 8757,
+        "sha256": "b25afa718b4c79fe04acc4566342ef63a04a73db2ae7ead4c88aad0088ba2b7d",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 42,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A4_object_10.csv",
+        "bytes": 8442,
+        "sha256": "3c7fda8a8b6c5d0f9f142ceefa5ae90a04c70dd4b057fd87bf01abf2a10c4807",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 30,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A5_object_11.csv",
+        "bytes": 11253,
+        "sha256": "f0d087a1d6f799ae3199f2e6799e510d82220abfe382c45c3ec2ecff9cdffa03",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 48,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A6_object_12.csv",
+        "bytes": 36363,
+        "sha256": "485e6f4ca6efe6020398ae6a608b045d926ef337abb1760f95cbc83b64579d14",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 155,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A7_object_13.csv",
+        "bytes": 4914,
+        "sha256": "9e7e9867c21db066c48d5a2b458f2dd89654f75f85426a7ebb007e9f5bac801f",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 20,
+        "action": "excluded",
+        "reason": "Contains actual unsupported-text prompt templates; Table A7 has no numerical statistics."
+      },
+      {
+        "path": "output/tables/Table_A8_object_14.csv",
+        "bytes": 11167,
+        "sha256": "916914c6c1a4f3a82c1f21c2286219edf64cc6b6a735fc3c92742d8cc9b2fdb7",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 50,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/Table_A9_object_15.csv",
+        "bytes": 17106,
+        "sha256": "3cb98418c9c7fca29b3c5882d6e8763d80ffef0af977382277d08cebe07f84bb",
+        "columns": [
+          "replication_mode",
+          "bootstrap_policy",
+          "row",
+          "column",
+          "row_label",
+          "manuscript_text",
+          "recomputed_values",
+          "source",
+          "coverage"
+        ],
+        "rows": 77,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/table1_sample.tex",
+        "bytes": 974,
+        "sha256": "8367f48e5e87abaa8cd51d158a944f6b7f341cc9faf7ef96a479325ab2b1dca2",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/table2_performance.tex",
+        "bytes": 1259,
+        "sha256": "7927852babcf2d6a9e7d72040fe47b2af16d0392de2240dcafc8beaeeb1c6c42",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/table3_stability.tex",
+        "bytes": 1316,
+        "sha256": "c76071754e992de23850caf4220324698a8baa461148807a7beceb1121d53788",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/table4_behavior.tex",
+        "bytes": 1245,
+        "sha256": "7866e39fe95411adcd88d32087cda9e275c43fac25ec538f5a5a02244fc85743",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/table5_artifacts.tex",
+        "bytes": 924,
+        "sha256": "51be92371f5d5af644ee4f206a8549e60ce8ac0ba8c5207f4abedb9ad6ec5e36",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/table6_temporal.tex",
+        "bytes": 897,
+        "sha256": "df86566f117ffe508a6e314e9f89fc8b039419faed2ec1d31cff3b7d1ae30dce",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA10_economic.tex",
+        "bytes": 1403,
+        "sha256": "a0b1db062d5311814a9c25b2bb80f93b7728029c41a5c561c58b14554f41f4b2",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA11_precision.tex",
+        "bytes": 927,
+        "sha256": "30e341ab1dfb69cd50cd3f8a17026c755b8c11f5dc1d2088c7e74e274d76e3ad",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA1_descriptives.tex",
+        "bytes": 958,
+        "sha256": "bfe7de62def84f17c519995f5cfd33abaf1adf6861e26d6e55579666d39468b9",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA2_annual.tex",
+        "bytes": 525,
+        "sha256": "78bcab68b897a25b40626013e70b6b39aed185b8c84ae0b030c6a3eee4b5b57a",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA3_extended.tex",
+        "bytes": 2034,
+        "sha256": "706cdca1b79f4c48da88f787710bce0c5cab0110d9ecfbdc644fbadd385f6b7c",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA4_temporal.tex",
+        "bytes": 909,
+        "sha256": "4ae682817c3d7db4db75e2747194734be03b96560694ad17aab357b53ebe95b6",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA5_calibration.tex",
+        "bytes": 1210,
+        "sha256": "878349beaf96fb7d66afd52695315acb36453cceb290f3459b2e215c0ebabdc4",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA6_washout.tex",
+        "bytes": 1133,
+        "sha256": "d0631d065d4986c290b1050a8db94bc4522d2daf8d3efd22fdaa30e64e3c8323",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA7_auc_differences.tex",
+        "bytes": 637,
+        "sha256": "a5dd2fd14c5997fb1d17dc4f2e1092ffe7d37baa119cf7ab93367f2d91461228",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA8_implementation.tex",
+        "bytes": 751,
+        "sha256": "caf97d1f32c20d21d0d8cff6f5e70ef1491b4f326d02c46eaf0df6ffebee9142",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/tableA9_information.tex",
+        "bytes": 919,
+        "sha256": "9266496df5c96edeab36cce5b28bc6505389684204b7742762e772b04b92c989",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/table_regulatory_signal_validation.tex",
+        "bytes": 1200,
+        "sha256": "6e7c8f2ebcf100060e87635e9f0539fa30120bad7a371fb4af62c0c3088fbf92",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "output/tables/table_status_reason_decomposition.tex",
+        "bytes": 1204,
+        "sha256": "3bae2b1b7812a80f254f46a3293dfb0f91dad779dfe013ac8e5d355d74cbc409",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "verify/FIGURE_VERIFICATION_sun21.csv",
+        "bytes": 1622,
+        "sha256": "ed1ce5e0840ac3dc41cf967ad6eadf5a6fa7a2e803dd5ee2a1aa07dbce4bc5aa",
+        "columns": [
+          "sun21_figure",
+          "sun21_media",
+          "sun15_media",
+          "sha256",
+          "embedded_image_identity",
+          "recomputed_backing_file",
+          "status",
+          "note"
+        ],
+        "rows": 5,
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "verify/MISMATCH_REPORT_sun21.md",
+        "bytes": 9117,
+        "sha256": "e65027c9df84880e6648ee0a9f910d147bcc7f97c29dc9f81bfef22a543dc5d0",
+        "action": "public_excerpt",
+        "reason": "Omit three introductory individual-case probability rows and the corresponding single-case bullet; retain all aggregate differences and limitations verbatim."
+      },
+      {
+        "path": "verify/VERIFICATION_SUMMARY_sun21.md",
+        "bytes": 1215,
+        "sha256": "b3e6d1121ef4040eed1e11b0144e3b7e91c516f697edcdcb7efc7cd3bb4081b9",
+        "action": "copy_exact",
+        "reason": "Reviewed aggregate statistics, table cells, figure, mapping or aggregate verification summary; no observation-level records."
+      },
+      {
+        "path": "verify/VERIFICATION_sun21.csv",
+        "bytes": 216057,
+        "sha256": "00093ed2bfeb4eaa1665de2455c96cb1d8b9c826358b3d6ac48e5424550b4da7",
+        "columns": [
+          "table",
+          "location",
+          "kind",
+          "scope",
+          "status",
+          "manuscript_value",
+          "recomputed_value",
+          "proposed_display_value",
+          "cell_text",
+          "source",
+          "reason",
+          "table_object",
+          "row",
+          "column",
+          "token"
+        ],
+        "rows": 793,
+        "action": "excluded",
+        "reason": "CSV has 793 data rows, above the 500-row release limit. Also contains six individual-example score/probability records. Publish unchanged eligible records by table instead."
+      }
+    ],
+    "verification": {
+      "source": "verify/VERIFICATION_sun21.csv",
+      "source_rows": 793,
+      "retained_rows": 787,
+      "excluded_individual_example_records": [
+        {
+          "source_csv_line": 768,
+          "reason": "Individual-case model score/probability and case reference."
+        },
+        {
+          "source_csv_line": 769,
+          "reason": "Individual-case model score/probability and case reference."
+        },
+        {
+          "source_csv_line": 770,
+          "reason": "Individual-case model score/probability and case reference."
+        },
+        {
+          "source_csv_line": 771,
+          "reason": "Individual-case model score/probability and case reference."
+        },
+        {
+          "source_csv_line": 772,
+          "reason": "Individual-case model score/probability and case reference."
+        },
+        {
+          "source_csv_line": 773,
+          "reason": "Individual-case model score/probability and case reference."
+        }
+      ],
+      "partitions": [
+        {
+          "path": "verify/VERIFICATION_sun21/Table_1.csv",
+          "table": "Table 1",
+          "rows": 32,
+          "sha256": "003793b17457d1fded161ce1713a44c5c2471cd3ac9c9ed2002847c9698b9df3",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_2.csv",
+          "table": "Table 2",
+          "rows": 30,
+          "sha256": "f06dd0e98f66d652b7b0b0753f1ccddb5c6998ff8998c9fcf3414ec7542e6f3a",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_3.csv",
+          "table": "Table 3",
+          "rows": 26,
+          "sha256": "53aee2f83122289212b9a37509f8e70cd859d7342d2d6361a31a5b7d439b3965",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_4.csv",
+          "table": "Table 4",
+          "rows": 60,
+          "sha256": "44062333a19f4a8772247c765d87e6450b432d8913115cd07f29bb777d9b7430",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_5.csv",
+          "table": "Table 5",
+          "rows": 27,
+          "sha256": "ccd1117ef53ac8ae4309e7fff3a758d42af2a4cc0b035c718eb41fcbb2b14044",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_6.csv",
+          "table": "Table 6",
+          "rows": 28,
+          "sha256": "81440f4bda00d85e33e362f62d513871f5bdff40e9d8b13b307861b91422eda0",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A1.csv",
+          "table": "Table A1",
+          "rows": 43,
+          "sha256": "c7fa5af2df0f82e2c139974da396c653e003283b8ff77ff56ea2d9fc9f80224d",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A2.csv",
+          "table": "Table A2",
+          "rows": 43,
+          "sha256": "35d5a2d7bad5f30d3b6fd3dcaf54ef94710fbb89446c6400d732d62059d9c66b",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A3.csv",
+          "table": "Table A3",
+          "rows": 36,
+          "sha256": "546e4061ca6983c7b74709a9f2f092017ff548b7619e5964315f16fc65d58c5c",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A4.csv",
+          "table": "Table A4",
+          "rows": 28,
+          "sha256": "84ced59cdc7f5018bc7d1c62c40689c4a5dabf307dadbe4b6fa4de42c894be73",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A5.csv",
+          "table": "Table A5",
+          "rows": 56,
+          "sha256": "e76aeb86cdee9f31b1db796f3fea4c57edcb129f3f73024894499bf264516418",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A6.csv",
+          "table": "Table A6",
+          "rows": 134,
+          "sha256": "0d9de5434f080e6e601d9b8e692f7a9b0d73c8f1f14257cb02abe2f25041c866",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A7.csv",
+          "table": "Table A7",
+          "rows": 9,
+          "sha256": "69fc422a46818dc23d83dced70e3f1957084675e6ce799cfffcfb79e5e58daa1",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A8.csv",
+          "table": "Table A8",
+          "rows": 30,
+          "sha256": "870a89f6bd603812d78643512c2c722aa0e249a5468bb43cb67bd52cd5ff1d2e",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A9.csv",
+          "table": "Table A9",
+          "rows": 54,
+          "sha256": "d50f4e77b25758ffdaaf1e082f2a6e9bd71f669f842da0f6956e98045635313a",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A10.csv",
+          "table": "Table A10",
+          "rows": 52,
+          "sha256": "59454bc994b186147e8d5f201d2b142974a98cd64f08faadb0842f13c91a4010",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A11.csv",
+          "table": "Table A11",
+          "rows": 46,
+          "sha256": "d434066a30611f5d28f194da1c7c53a01dd32465ee9ed703e3d55c6e965c4a75",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A12.csv",
+          "table": "Table A12",
+          "rows": 15,
+          "sha256": "1508ce02a17b9d90bc582f1e944555c663c7dd133f4237222b19b9a8e118cce0",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Table_A13.csv",
+          "table": "Table A13",
+          "rows": 17,
+          "sha256": "576a8f4afe5cbc5e51d95c7f0b830df24a68f15d1c4783429f65ca2304e8fce9",
+          "retained_fields_unchanged": true
+        },
+        {
+          "path": "verify/VERIFICATION_sun21/Body.csv",
+          "table": "Body",
+          "rows": 21,
+          "sha256": "4bc778b85c41d8b3c65c876bdf341d28c5bfbba999a37b77d551ce566eba1182",
+          "retained_fields_unchanged": true
+        }
+      ],
+      "table_body_matches": 561,
+      "table_body_denominator": 568
+    },
+    "mismatch_excerpt": {
+      "source_sha256": "e65027c9df84880e6648ee0a9f910d147bcc7f97c29dc9f81bfef22a543dc5d0",
+      "removed_source_line_numbers": [
+        34,
+        35,
+        36,
+        46
+      ],
+      "retained_content_unchanged": true
+    }
+  }
 }

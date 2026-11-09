@@ -1,0 +1,15 @@
+\begin{table}[!htbp]\centering
+\caption{Independently Rebuilt Risk Sets by Washout}\label{tab:a_washout}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{rlrrrrrr}\toprule
+Days & Period & Records & Firms & ST/*ST events & Rate (\%) & Composite events & Rate (\%) \\
+\midrule
+0 & Training & 20,758 & 3,506 & 439 & 2.11 & 452 & 2.18 \\
+0 & Holdout & 25,679 & 5,095 & 588 & 2.29 & 601 & 2.34 \\
+7 & Training & 20,508 & 3,503 & 251 & 1.22 & 264 & 1.29 \\
+7 & Holdout & 25,285 & 5,067 & 368 & 1.46 & 382 & 1.51 \\
+30 & Training & 20,668 & 3,504 & 346 & 1.67 & 359 & 1.74 \\
+30 & Holdout & 25,390 & 5,067 & 474 & 1.87 & 487 & 1.92 \\
+\bottomrule\end{tabular}}
+\begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Each row rebuilds eligibility at its own landmark; the zero- and seven-day rows are not conditional on surviving the 30-day risk set. The composite adds transitions to trading-warning and direct-delisting states. Changing the landmark changes both who remains normal and the end of the one-year window, so these rows describe alternative targets rather than a parameter perturbation on a fixed cohort.\end{minipage}
+\end{table}

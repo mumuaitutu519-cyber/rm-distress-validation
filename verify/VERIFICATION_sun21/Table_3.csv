@@ -1,0 +1,27 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table 3,"object 3, row 2, cell 2, token 1",numeric,statistic,MATCH,20.0,20.0,20.0,20.0 score points,output/analysis/strict_timing_primary_range_summary.csv,,3,2,2,1
+Table 3,"object 3, row 2, cell 3, token 1",numeric,statistic,MATCH,256,256.0,256,256-firm audit,output/analysis/strict_timing_primary_range_summary.csv (sample size),,3,2,3,1
+Table 3,"object 3, row 3, cell 2, token 1",numeric,statistic,MATCH,19.4,19.44921875,19.4,19.4 score points,output/analysis/strict_timing_primary_range_summary.csv,,3,3,2,1
+Table 3,"object 3, row 3, cell 3, token 1",numeric,statistic,MATCH,256,256.0,256,256-firm audit,output/analysis/strict_timing_primary_range_summary.csv (sample size),,3,3,3,1
+Table 3,"object 3, row 4, cell 2, token 1",numeric,statistic,MATCH,85.2,85.15625,85.2,85.2%,output/analysis/strict_timing_primary_range_summary.csv,,3,4,2,1
+Table 3,"object 3, row 4, cell 3, token 1",numeric,statistic,MATCH,256,256.0,256,256-firm audit,output/analysis/strict_timing_primary_range_summary.csv (sample size),,3,4,3,1
+Table 3,"object 3, row 5, cell 1, token 1",numeric,design_label,STRUCTURAL,1,,,1% calibrated-threshold crossing,,"Fixed design, year, window, model name, code or label",3,5,1,1
+Table 3,"object 3, row 5, cell 2, token 1",numeric,statistic,MATCH,48.8,48.79583492601175,48.8,48.8%,output/analysis/strict_timing_threshold_crossing_curve.csv,,3,5,2,1
+Table 3,"object 3, row 6, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,2% calibrated-threshold crossing,,"Fixed design, year, window, model name, code or label",3,6,1,1
+Table 3,"object 3, row 6, cell 2, token 1",numeric,statistic,MATCH,17.3,17.29449676887815,17.3,17.3%,output/analysis/strict_timing_threshold_crossing_curve.csv,,3,6,2,1
+Table 3,"object 3, row 7, cell 1, token 1",numeric,design_label,STRUCTURAL,5,,,5% list intersection/union,,"Fixed design, year, window, model name, code or label",3,7,1,1
+Table 3,"object 3, row 7, cell 2, token 1",numeric,statistic,MATCH,5,5.0,5,5/20,output/analysis/strict_timing_primary_rosters.csv,,3,7,2,1
+Table 3,"object 3, row 7, cell 2, token 2",numeric,statistic,MATCH,20,20.0,20,5/20,output/analysis/strict_timing_primary_rosters.csv,,3,7,2,2
+Table 3,"object 3, row 7, cell 3, token 1",numeric,statistic,MATCH,13,13.0,13,k=13 per representation,output/analysis/strict_timing_primary_rosters.csv (fixed-capacity list count),,3,7,3,1
+Table 3,"object 3, row 8, cell 1, token 1",numeric,design_label,STRUCTURAL,5,,,5% list Jaccard overlap,,"Fixed design, year, window, model name, code or label",3,8,1,1
+Table 3,"object 3, row 8, cell 2, token 1",numeric,statistic,MATCH,0.250,0.25,0.250,0.250,output/analysis/strict_timing_primary_rosters.csv,,3,8,2,1
+Table 3,"object 3, row 8, cell 3, token 1",numeric,statistic,MATCH,256,256.0,256,256-firm audit,output/analysis/strict_timing_primary_range_summary.csv (sample size),,3,8,3,1
+Table 3,"object 3, row 9, cell 1, token 1",numeric,design_label,STRUCTURAL,10,,,10% list intersection/union,,"Fixed design, year, window, model name, code or label",3,9,1,1
+Table 3,"object 3, row 9, cell 2, token 1",numeric,statistic,MATCH,18,18.0,18,18/34,output/analysis/strict_timing_primary_rosters.csv,,3,9,2,1
+Table 3,"object 3, row 9, cell 2, token 2",numeric,statistic,MATCH,34,34.0,34,18/34,output/analysis/strict_timing_primary_rosters.csv,,3,9,2,2
+Table 3,"object 3, row 9, cell 3, token 1",numeric,statistic,MATCH,26,26.0,26,k=26 per representation,output/analysis/strict_timing_primary_rosters.csv (fixed-capacity list count),,3,9,3,1
+Table 3,"object 3, row 10, cell 1, token 1",numeric,design_label,STRUCTURAL,10,,,10% list Jaccard overlap,,"Fixed design, year, window, model name, code or label",3,10,1,1
+Table 3,"object 3, row 10, cell 2, token 1",numeric,statistic,MATCH,0.529,0.5294117647058824,0.529,0.529,output/analysis/strict_timing_primary_rosters.csv,,3,10,2,1
+Table 3,"object 3, row 10, cell 3, token 1",numeric,statistic,MATCH,256,256.0,256,256-firm audit,output/analysis/strict_timing_primary_range_summary.csv (sample size),,3,10,3,1
+Table 3,"paragraph 109, table note, token 1",numeric,statistic,MATCH,256,256,256,"Notes. Equivalent representations are the baseline list, reversed order, and decimal rather than percentage units. Threshold rates use design weights and a common Platt map estimated on baseline scores. Review-list analyses use the event-enriched 256-firm audit. Fixed case identifiers break ties and enforce exact top-k capacity. Rows are the stability diagnostics defined in Section 2. Estimate is the value of each diagnostic and Reference states the sample or frame on which it is computed.",data/derived/strict_timing_primary_cases_256.parquet,,,,,1
+Table 3,"paragraph 109, table note, token 2",numeric,design_label,STRUCTURAL,2,,,"Notes. Equivalent representations are the baseline list, reversed order, and decimal rather than percentage units. Threshold rates use design weights and a common Platt map estimated on baseline scores. Review-list analyses use the event-enriched 256-firm audit. Fixed case identifiers break ties and enforce exact top-k capacity. Rows are the stability diagnostics defined in Section 2. Estimate is the value of each diagnostic and Reference states the sample or frame on which it is computed.",,"Year, cross-reference, fixed design, capacity, confidence level or number of bootstrap draws",,,,2

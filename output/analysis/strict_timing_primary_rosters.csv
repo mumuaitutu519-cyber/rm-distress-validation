@@ -1,0 +1,9 @@
+capacity,variant,top_n,selected_events,event_recall,intersection_all,union_all,jaccard_all
+0.05,strict_canonical,13,12.0,0.1875,,,
+0.05,strict_order_reversed,13,12.0,0.1875,,,
+0.05,strict_unit_decimal,13,10.0,0.15625,,,
+0.05,three_representation_summary,13,,,5.0,20.0,0.25
+0.1,strict_canonical,26,21.0,0.328125,,,
+0.1,strict_order_reversed,26,21.0,0.328125,,,
+0.1,strict_unit_decimal,26,18.0,0.28125,,,
+0.1,three_representation_summary,26,,,18.0,34.0,0.5294117647058824

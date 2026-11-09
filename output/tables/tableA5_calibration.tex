@@ -1,0 +1,16 @@
+\begin{table}[!htbp]\centering
+\caption{Alternative Grouped Cross-Fit Calibration Maps}\label{tab:a_calibration}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llrrrrrr}\toprule
+Score & Map & Mean $p$ (\%) & Brier & BSS & Log loss & Pooled intercept & Pooled slope \\
+\midrule
+Qwen3-4B & Intercept only & 1.88 & 0.0176 & 0.041 & 0.0829 & -0.838 & 0.743 \\
+Qwen3-4B & Platt & 1.89 & 0.0174 & 0.051 & 0.0815 & -0.087 & 0.978 \\
+Qwen3-4B & Beta & 1.90 & 0.0175 & 0.046 & 0.0814 & -0.141 & 0.964 \\
+Qwen3-4B & Isotonic & 1.96 & 0.0175 & 0.042 & 0.0812 & -0.312 & 0.923 \\
+Logit & Platt & 1.88 & 0.0174 & 0.053 & 0.0788 & -0.031 & 0.992 \\
+Histogram boosting & Platt & 1.87 & 0.0176 & 0.040 & 0.0796 & -0.025 & 0.994 \\
+XGBoost & Platt & 1.87 & 0.0173 & 0.053 & 0.0785 & -0.027 & 0.993 \\
+\bottomrule\end{tabular}}
+\begin{minipage}{\textwidth}\footnotesize\textit{Notes:} All maps use the same firm-grouped folds and design weights. The Qwen rows compare four candidate maps on canonical scores. The remaining rows report the prespecified Platt map for the structured benchmarks. Ranking after pooled cross-fitting can change slightly because held-out folds receive separately estimated maps.\end{minipage}
+\end{table}

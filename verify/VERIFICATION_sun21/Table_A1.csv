@@ -1,0 +1,44 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table A1,"object 7, row 2, cell 2, token 1",numeric,statistic,MATCH,22.343,22.34343020900876,22.343,22.343,output/analysis/strict_timing_descriptives.csv Size,,7,2,2,1
+Table A1,"object 7, row 2, cell 3, token 1",numeric,statistic,MATCH,1.280,1.280163946645863,1.280,1.280,output/analysis/strict_timing_descriptives.csv Size,,7,2,3,1
+Table A1,"object 7, row 2, cell 4, token 1",numeric,statistic,MATCH,22.224,22.223789838867187,22.224,22.224,output/analysis/strict_timing_descriptives.csv Size,,7,2,4,1
+Table A1,"object 7, row 2, cell 5, token 1",numeric,statistic,MATCH,22.330,22.330258657951543,22.330,22.330,output/analysis/strict_timing_descriptives.csv Size,,7,2,5,1
+Table A1,"object 7, row 3, cell 2, token 1",numeric,statistic,MATCH,0.408,0.4080059445057109,0.408,0.408,output/analysis/strict_timing_descriptives.csv Lev,,7,3,2,1
+Table A1,"object 7, row 3, cell 3, token 1",numeric,statistic,MATCH,0.202,0.2020422389149773,0.202,0.202,output/analysis/strict_timing_descriptives.csv Lev,,7,3,3,1
+Table A1,"object 7, row 3, cell 4, token 1",numeric,statistic,MATCH,0.443,0.44314648828125,0.443,0.443,output/analysis/strict_timing_descriptives.csv Lev,,7,3,4,1
+Table A1,"object 7, row 3, cell 5, token 1",numeric,statistic,MATCH,0.407,0.406942393828242,0.407,0.407,output/analysis/strict_timing_descriptives.csv Lev,,7,3,5,1
+Table A1,"object 7, row 4, cell 2, token 1",numeric,statistic,MATCH,0.031,0.0310615622323749,0.031,0.031,output/analysis/strict_timing_descriptives.csv ROA,,7,4,2,1
+Table A1,"object 7, row 4, cell 3, token 1",numeric,statistic,MATCH,0.062,0.0616869281289809,0.062,0.062,output/analysis/strict_timing_descriptives.csv ROA,,7,4,3,1
+Table A1,"object 7, row 4, cell 4, token 1",numeric,statistic,MATCH,0.019,0.018896298125,0.019,0.019,output/analysis/strict_timing_descriptives.csv ROA,,7,4,4,1
+Table A1,"object 7, row 4, cell 5, token 1",numeric,statistic,MATCH,0.031,0.0305527796526079,0.031,0.031,output/analysis/strict_timing_descriptives.csv ROA,,7,4,5,1
+Table A1,"object 7, row 5, cell 2, token 1",numeric,statistic,MATCH,0.309,0.3087208374210318,0.309,0.309,output/analysis/strict_timing_descriptives.csv Growth,,7,5,2,1
+Table A1,"object 7, row 5, cell 3, token 1",numeric,statistic,MATCH,0.947,0.9468278840471958,0.947,0.947,output/analysis/strict_timing_descriptives.csv Growth,,7,5,3,1
+Table A1,"object 7, row 5, cell 4, token 1",numeric,statistic,MATCH,0.410,0.4098048565234373,0.410,0.410,output/analysis/strict_timing_descriptives.csv Growth,,7,5,4,1
+Table A1,"object 7, row 5, cell 5, token 1",numeric,statistic,MATCH,0.305,0.3054499999897392,0.305,0.305,output/analysis/strict_timing_descriptives.csv Growth,,7,5,5,1
+Table A1,"object 7, row 6, cell 2, token 1",numeric,statistic,MATCH,0.189,0.1885549139742616,0.189,0.189,output/analysis/strict_timing_descriptives.csv Cash,,7,6,2,1
+Table A1,"object 7, row 6, cell 3, token 1",numeric,statistic,MATCH,0.131,0.1312082248251606,0.131,0.131,output/analysis/strict_timing_descriptives.csv Cash,,7,6,3,1
+Table A1,"object 7, row 6, cell 4, token 1",numeric,statistic,MATCH,0.171,0.1707878012815976,0.171,0.171,output/analysis/strict_timing_descriptives.csv Cash,,7,6,4,1
+Table A1,"object 7, row 6, cell 5, token 1",numeric,statistic,MATCH,0.192,0.1922805950929982,0.192,0.192,output/analysis/strict_timing_descriptives.csv Cash,,7,6,5,1
+Table A1,"object 7, row 7, cell 2, token 1",numeric,statistic,MATCH,0.934,0.9335974339038992,0.934,0.934,output/analysis/strict_timing_descriptives.csv Tangibility,,7,7,2,1
+Table A1,"object 7, row 7, cell 3, token 1",numeric,statistic,MATCH,0.080,0.0798304626092855,0.080,0.080,output/analysis/strict_timing_descriptives.csv Tangibility,,7,7,3,1
+Table A1,"object 7, row 7, cell 4, token 1",numeric,statistic,MATCH,0.928,0.927665751328125,0.928,0.928,output/analysis/strict_timing_descriptives.csv Tangibility,,7,7,4,1
+Table A1,"object 7, row 7, cell 5, token 1",numeric,statistic,MATCH,0.934,0.9342293993000113,0.934,0.934,output/analysis/strict_timing_descriptives.csv Tangibility,,7,7,5,1
+Table A1,"object 7, row 8, cell 2, token 1",numeric,statistic,MATCH,1.947,1.9466359255108312,1.947,1.947,output/analysis/strict_timing_descriptives.csv TobinQ,,7,8,2,1
+Table A1,"object 7, row 8, cell 3, token 1",numeric,statistic,MATCH,1.232,1.2322554108917607,1.232,1.232,output/analysis/strict_timing_descriptives.csv TobinQ,,7,8,3,1
+Table A1,"object 7, row 8, cell 4, token 1",numeric,statistic,MATCH,2.013,2.01312016046875,2.013,2.013,output/analysis/strict_timing_descriptives.csv TobinQ,,7,8,4,1
+Table A1,"object 7, row 8, cell 5, token 1",numeric,statistic,MATCH,1.984,1.9844163690074623,1.984,1.984,output/analysis/strict_timing_descriptives.csv TobinQ,,7,8,5,1
+Table A1,"object 7, row 9, cell 2, token 1",numeric,statistic,MATCH,2.096,2.095914739410612,2.096,2.096,output/analysis/strict_timing_descriptives.csv FirmAge,,7,9,2,1
+Table A1,"object 7, row 9, cell 3, token 1",numeric,statistic,MATCH,0.925,0.9251152198011536,0.925,0.925,output/analysis/strict_timing_descriptives.csv FirmAge,,7,9,3,1
+Table A1,"object 7, row 9, cell 4, token 1",numeric,statistic,MATCH,2.070,2.069667568782896,2.070,2.070,output/analysis/strict_timing_descriptives.csv FirmAge,,7,9,4,1
+Table A1,"object 7, row 9, cell 5, token 1",numeric,statistic,MATCH,2.063,2.062908983526325,2.063,2.063,output/analysis/strict_timing_descriptives.csv FirmAge,,7,9,5,1
+Table A1,"object 7, row 10, cell 2, token 1",numeric,statistic,MATCH,0.176,0.1762504923198109,0.176,0.176,output/analysis/strict_timing_descriptives.csv Loss,,7,10,2,1
+Table A1,"object 7, row 10, cell 3, token 1",numeric,statistic,MATCH,0.381,0.3810406471069457,0.381,0.381,output/analysis/strict_timing_descriptives.csv Loss,,7,10,3,1
+Table A1,"object 7, row 10, cell 4, token 1",numeric,statistic,MATCH,0.281,0.28125,0.281,0.281,output/analysis/strict_timing_descriptives.csv Loss,,7,10,4,1
+Table A1,"object 7, row 10, cell 5, token 1",numeric,statistic,MATCH,0.189,0.1892936807988122,0.189,0.189,output/analysis/strict_timing_descriptives.csv Loss,,7,10,5,1
+Table A1,"object 7, row 11, cell 2, token 1",numeric,statistic,MATCH,0.031,0.0309300774542274,0.031,0.031,output/analysis/strict_timing_descriptives.csv return_volatility,,7,11,2,1
+Table A1,"object 7, row 11, cell 3, token 1",numeric,statistic,MATCH,0.012,0.0119461811133016,0.012,0.012,output/analysis/strict_timing_descriptives.csv return_volatility,,7,11,3,1
+Table A1,"object 7, row 11, cell 4, token 1",numeric,statistic,MATCH,0.032,0.0321555360307635,0.032,0.032,output/analysis/strict_timing_descriptives.csv return_volatility,,7,11,4,1
+Table A1,"object 7, row 11, cell 5, token 1",numeric,statistic,MATCH,0.031,0.0313314886756506,0.031,0.031,output/analysis/strict_timing_descriptives.csv return_volatility,,7,11,5,1
+Table A1,"paragraph 263, table note, token 1",numeric,design_label,STRUCTURAL,2019,,,"Notes. The weighted probability-audit mean uses inverse inclusion weights. Variables are the training-period-winsorized, prompt-rounded inputs used by all models. Rows are the ten model inputs. Mean and SD are the mean and standard deviation in the 2019-2024 holdout. Paired is the mean in the 256-firm paired audit. Weighted is the design-weighted mean in the probability audit.",,"Year, cross-reference, fixed design, capacity, confidence level or number of bootstrap draws",,,,1
+Table A1,"paragraph 263, table note, token 2",numeric,design_label,STRUCTURAL,2024,,,"Notes. The weighted probability-audit mean uses inverse inclusion weights. Variables are the training-period-winsorized, prompt-rounded inputs used by all models. Rows are the ten model inputs. Mean and SD are the mean and standard deviation in the 2019-2024 holdout. Paired is the mean in the 256-firm paired audit. Weighted is the design-weighted mean in the probability audit.",,"Year, cross-reference, fixed design, capacity, confidence level or number of bootstrap draws",,,,2
+Table A1,"paragraph 263, table note, token 3",numeric,statistic,MATCH,256,256,256,"Notes. The weighted probability-audit mean uses inverse inclusion weights. Variables are the training-period-winsorized, prompt-rounded inputs used by all models. Rows are the ten model inputs. Mean and SD are the mean and standard deviation in the 2019-2024 holdout. Paired is the mean in the 256-firm paired audit. Weighted is the design-weighted mean in the probability audit.",data/derived/strict_timing_primary_cases_256.parquet,,,,,3

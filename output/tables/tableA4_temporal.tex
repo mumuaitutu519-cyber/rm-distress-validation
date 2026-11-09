@@ -1,0 +1,19 @@
+{\small\begin{longtable}{@{}p{0.29\textwidth}lrrr@{}}
+\caption{Year-Specific Forward-Time Results}\label{tab:a_temporal}\\
+\toprule Score & Year & ROC-AUC & Mean $p$ (\%) & Historical BSS \\
+\midrule\endfirsthead
+\toprule Score & Year & ROC-AUC & Mean $p$ (\%) & Historical BSS \\
+\midrule\endhead
+qwen\_canonical\_naive & 2022 & 0.751 & 2.03 & 0.039 \\
+qwen\_canonical\_naive & 2023 & 0.744 & 1.78 & 0.039 \\
+qwen\_canonical\_naive & 2024 & 0.736 & 2.10 & 0.047 \\
+qwen\_canonical\_naive & 2022--2024 pooled & 0.741 & 1.97 & 0.042 \\
+logit & 2022 & 0.806 & 1.83 & 0.039 \\
+logit & 2023 & 0.834 & 1.87 & 0.065 \\
+logit & 2024 & 0.799 & 1.79 & 0.054 \\
+logit & 2022--2024 pooled & 0.815 & 1.83 & 0.054 \\
+xgboost & 2022 & 0.829 & 2.08 & 0.027 \\
+xgboost & 2023 & 0.829 & 1.87 & 0.065 \\
+xgboost & 2024 & 0.815 & 1.67 & 0.060 \\
+xgboost & 2022--2024 pooled & 0.820 & 1.87 & 0.054 \\
+\bottomrule\end{longtable}}

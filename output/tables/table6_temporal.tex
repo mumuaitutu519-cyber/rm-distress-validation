@@ -1,0 +1,19 @@
+\begin{table}[!htbp]
+\centering
+\caption{Forward-Time Calibration, 2022--2024}
+\label{tab:temporal}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Score & ROC-AUC & PR-AUC & Mean $p$ (\%) & Brier & BSS vs historical rate \\
+\midrule
+Qwen3-4B score & 0.741 & 0.098 & 1.97 & 0.0200 & 0.042 \\
+Regularized logit & 0.815 & 0.158 & 1.83 & 0.0198 & 0.054 \\
+Histogram gradient boosting & 0.806 & 0.088 & 1.86 & 0.0200 & 0.040 \\
+XGBoost & 0.820 & 0.127 & 1.87 & 0.0198 & 0.054 \\
+\bottomrule
+\end{tabular}}
+\begin{minipage}{\textwidth}\footnotesize
+\textit{Notes:} The 2022 map uses 2019--2021, the 2023 map uses 2019--2022, and the 2024 map uses 2019--2023. The reference forecast for each year is the design-weighted event rate available from prior years only. Pooled BSS scores these varying historical-rate forecasts on their corresponding evaluation years.
+\end{minipage}
+\end{table}

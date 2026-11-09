@@ -1,0 +1,4 @@
+variant,n,events,mean_score,median_score,unique_scores,integer_output_rate,roc_auc,pr_auc
+strict_canonical,256,64,38.53515625,32.0,19,1.0,0.7646484375,0.6182745237286866
+strict_order_reversed,256,64,28.40625,18.0,13,1.0,0.7495524088541667,0.59108201877816
+strict_unit_decimal,256,64,46.890625,42.0,17,1.0,0.7615559895833333,0.5578544446525084

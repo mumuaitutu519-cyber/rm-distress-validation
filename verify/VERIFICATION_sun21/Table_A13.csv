@@ -1,0 +1,18 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table A13,"object 19, row 2, cell 2, token 1",numeric,statistic,MATCH,192,192.0,192,192,output/analysis/strict_timing_reload_repeatability.csv,,19,2,2,1
+Table A13,"object 19, row 2, cell 3, token 1",numeric,statistic,MATCH,0.00,0.0,0.00,0.00,output/analysis/strict_timing_reload_repeatability.csv,,19,2,3,1
+Table A13,"object 19, row 2, cell 4, token 1",numeric,statistic,MATCH,0.00,0.0,0.00,0.00,output/analysis/strict_timing_reload_repeatability.csv,,19,2,4,1
+Table A13,"object 19, row 2, cell 5, token 1",numeric,statistic,MATCH,0.0,0.0,0.0,0.0,output/analysis/strict_timing_reload_repeatability.csv,,19,2,5,1
+Table A13,"object 19, row 3, cell 1, token 1",numeric,design_label,STRUCTURAL,1,,,Batch size 1 versus 8,,"Fixed design, year, window, model name, code or label",19,3,1,1
+Table A13,"object 19, row 3, cell 1, token 2",numeric,design_label,STRUCTURAL,8,,,Batch size 1 versus 8,,"Fixed design, year, window, model name, code or label",19,3,1,2
+Table A13,"object 19, row 3, cell 2, token 1",numeric,statistic,MATCH,192,192.0,192,192,output/analysis/strict_timing_batch_sensitivity.csv,,19,3,2,1
+Table A13,"object 19, row 3, cell 3, token 1",numeric,statistic,MATCH,7.29,7.29166666666666,7.29,7.29,output/analysis/strict_timing_batch_sensitivity.csv,,19,3,3,1
+Table A13,"object 19, row 3, cell 4, token 1",numeric,statistic,MATCH,0.52,0.5208333333333334,0.52,0.52,output/analysis/strict_timing_batch_sensitivity.csv,,19,3,4,1
+Table A13,"object 19, row 3, cell 5, token 1",numeric,statistic,MATCH,14.0,14.0,14.0,14.0,output/analysis/strict_timing_batch_sensitivity.csv,,19,3,5,1
+Table A13,"object 19, row 4, cell 1, token 1",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B 4-bit versus bfloat16,,"Fixed design, year, window, model name, code or label",19,4,1,1
+Table A13,"object 19, row 4, cell 1, token 2",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B 4-bit versus bfloat16,,"Fixed design, year, window, model name, code or label",19,4,1,2
+Table A13,"object 19, row 4, cell 2, token 1",numeric,statistic,MATCH,192,192.0,192,192,output/analysis/strict_timing_quantization_sensitivity.csv,,19,4,2,1
+Table A13,"object 19, row 4, cell 3, token 1",numeric,statistic,MATCH,54.17,54.166666666666664,54.17,54.17,output/analysis/strict_timing_quantization_sensitivity.csv,,19,4,3,1
+Table A13,"object 19, row 4, cell 4, token 1",numeric,statistic,MATCH,7.10,7.096875,7.10,7.10,output/analysis/strict_timing_quantization_sensitivity.csv,,19,4,4,1
+Table A13,"object 19, row 4, cell 5, token 1",numeric,statistic,MATCH,50.0,50.0,50.0,50.0,output/analysis/strict_timing_quantization_sensitivity.csv,,19,4,5,1
+Table A13,"paragraph 397, table note, token 1",numeric,statistic,MATCH,100,100.0,100,"Notes. All comparisons are prompt-matched. Fresh reload achieves 100% raw-string equality. Rows are implementation contrasts. Calls is the number of matched calls. Changed is the share of outputs that change, in percent. Absolute is the mean absolute change. Maximum is the largest absolute change.",data/calls/ matched reload raw strings,,,,,1

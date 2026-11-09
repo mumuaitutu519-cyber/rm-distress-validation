@@ -1,0 +1,135 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table A6,"object 12, row 2, cell 2, token 1",numeric,statistic,MISMATCH,2.62,2.625,2.63,2.62,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_after,"Exact halfway case: the manuscript uses Python/native round-to-even formatting, while the requested decimal half-up verification rounds away from zero. Same observations and underlying value. Replacement applies only if half-up is the chosen manuscript convention; this is not a substantive statistical error.",12,2,2,1
+Table A6,"object 12, row 2, cell 3, token 1",numeric,statistic,MISMATCH,3.12,3.125,3.13,3.12,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_after,"Exact halfway case: the manuscript uses Python/native round-to-even formatting, while the requested decimal half-up verification rounds away from zero. Same observations and underlying value. Replacement applies only if half-up is the chosen manuscript convention; this is not a substantive statistical error.",12,2,3,1
+Table A6,"object 12, row 2, cell 4, token 1",numeric,statistic,MATCH,26.6,26.5625,26.6,26.6,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_after,,12,2,4,1
+Table A6,"object 12, row 2, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_after,,12,2,5,1
+Table A6,"object 12, row 3, cell 2, token 1",numeric,statistic,MATCH,2.03,2.03125,2.03,2.03,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_before,,12,3,2,1
+Table A6,"object 12, row 3, cell 3, token 1",numeric,statistic,MATCH,3.66,3.65625,3.66,3.66,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_before,,12,3,3,1
+Table A6,"object 12, row 3, cell 4, token 1",numeric,statistic,MATCH,43.8,43.75,43.8,43.8,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_before,,12,3,4,1
+Table A6,"object 12, row 3, cell 5, token 1",numeric,statistic,MATCH,30.0,30.0,30.0,30.0,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_before,,12,3,5,1
+Table A6,"object 12, row 4, cell 2, token 1",numeric,statistic,MATCH,-2.94,-2.9375,-2.94,-2.94,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_system,,12,4,2,1
+Table A6,"object 12, row 4, cell 3, token 1",numeric,statistic,MATCH,8.25,8.25,8.25,8.25,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_system,,12,4,3,1
+Table A6,"object 12, row 4, cell 4, token 1",numeric,statistic,MATCH,65.6,65.625,65.6,65.6,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_system,,12,4,4,1
+Table A6,"object 12, row 4, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_adverse_system,,12,4,5,1
+Table A6,"object 12, row 5, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,Cash-2pp,,"Fixed design, year, window, model name, code or label",12,5,1,1
+Table A6,"object 12, row 5, cell 2, token 1",numeric,statistic,MATCH,-0.88,-0.875,-0.88,-0.88,output/analysis/strict_timing_extended_paired_summary.csv strict_cash_down_2pp,,12,5,2,1
+Table A6,"object 12, row 5, cell 3, token 1",numeric,statistic,MATCH,1.38,1.375,1.38,1.38,output/analysis/strict_timing_extended_paired_summary.csv strict_cash_down_2pp,,12,5,3,1
+Table A6,"object 12, row 5, cell 4, token 1",numeric,statistic,MATCH,20.3,20.3125,20.3,20.3,output/analysis/strict_timing_extended_paired_summary.csv strict_cash_down_2pp,,12,5,4,1
+Table A6,"object 12, row 5, cell 5, token 1",numeric,statistic,MATCH,14.0,14.0,14.0,14.0,output/analysis/strict_timing_extended_paired_summary.csv strict_cash_down_2pp,,12,5,5,1
+Table A6,"object 12, row 6, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,Cash+2pp,,"Fixed design, year, window, model name, code or label",12,6,1,1
+Table A6,"object 12, row 6, cell 2, token 1",numeric,statistic,MATCH,-0.47,-0.46875,-0.47,-0.47,output/analysis/strict_timing_extended_paired_summary.csv strict_cash_up_2pp,,12,6,2,1
+Table A6,"object 12, row 6, cell 3, token 1",numeric,statistic,MATCH,0.91,0.90625,0.91,0.91,output/analysis/strict_timing_extended_paired_summary.csv strict_cash_up_2pp,,12,6,3,1
+Table A6,"object 12, row 6, cell 4, token 1",numeric,statistic,MATCH,12.5,12.5,12.5,12.5,output/analysis/strict_timing_extended_paired_summary.csv strict_cash_up_2pp,,12,6,4,1
+Table A6,"object 12, row 6, cell 5, token 1",numeric,statistic,MATCH,14.0,14.0,14.0,14.0,output/analysis/strict_timing_extended_paired_summary.csv strict_cash_up_2pp,,12,6,5,1
+Table A6,"object 12, row 7, cell 2, token 1",numeric,statistic,MATCH,29.33,29.328125,29.33,29.33,output/analysis/strict_timing_extended_paired_summary.csv strict_deteriorated,,12,7,2,1
+Table A6,"object 12, row 7, cell 3, token 1",numeric,statistic,MATCH,29.33,29.328125,29.33,29.33,output/analysis/strict_timing_extended_paired_summary.csv strict_deteriorated,,12,7,3,1
+Table A6,"object 12, row 7, cell 4, token 1",numeric,statistic,MATCH,92.2,92.1875,92.2,92.2,output/analysis/strict_timing_extended_paired_summary.csv strict_deteriorated,,12,7,4,1
+Table A6,"object 12, row 7, cell 5, token 1",numeric,statistic,MATCH,75.0,75.0,75.0,75.0,output/analysis/strict_timing_extended_paired_summary.csv strict_deteriorated,,12,7,5,1
+Table A6,"object 12, row 8, cell 2, token 1",numeric,statistic,MATCH,2.97,2.96875,2.97,2.97,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_after,,12,8,2,1
+Table A6,"object 12, row 8, cell 3, token 1",numeric,statistic,MATCH,3.34,3.34375,3.34,3.34,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_after,,12,8,3,1
+Table A6,"object 12, row 8, cell 4, token 1",numeric,statistic,MATCH,23.4,23.4375,23.4,23.4,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_after,,12,8,4,1
+Table A6,"object 12, row 8, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_after,,12,8,5,1
+Table A6,"object 12, row 9, cell 2, token 1",numeric,statistic,MATCH,-6.72,-6.71875,-6.72,-6.72,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_before,,12,9,2,1
+Table A6,"object 12, row 9, cell 3, token 1",numeric,statistic,MATCH,7.34,7.34375,7.34,7.34,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_before,,12,9,3,1
+Table A6,"object 12, row 9, cell 4, token 1",numeric,statistic,MATCH,59.4,59.375,59.4,59.4,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_before,,12,9,4,1
+Table A6,"object 12, row 9, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_before,,12,9,5,1
+Table A6,"object 12, row 10, cell 2, token 1",numeric,statistic,MATCH,-1.78,-1.78125,-1.78,-1.78,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_system,,12,10,2,1
+Table A6,"object 12, row 10, cell 3, token 1",numeric,statistic,MATCH,7.84,7.84375,7.84,7.84,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_system,,12,10,3,1
+Table A6,"object 12, row 10, cell 4, token 1",numeric,statistic,MATCH,57.8,57.8125,57.8,57.8,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_system,,12,10,4,1
+Table A6,"object 12, row 10, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_favorable_system,,12,10,5,1
+Table A6,"object 12, row 11, cell 1, token 1",numeric,design_label,STRUCTURAL,5,,,Growth-5pp,,"Fixed design, year, window, model name, code or label",12,11,1,1
+Table A6,"object 12, row 11, cell 2, token 1",numeric,statistic,MATCH,0.61,0.609375,0.61,0.61,output/analysis/strict_timing_extended_paired_summary.csv strict_growth_down_5pp,,12,11,2,1
+Table A6,"object 12, row 11, cell 3, token 1",numeric,statistic,MATCH,2.05,2.046875,2.05,2.05,output/analysis/strict_timing_extended_paired_summary.csv strict_growth_down_5pp,,12,11,3,1
+Table A6,"object 12, row 11, cell 4, token 1",numeric,statistic,MATCH,26.6,26.5625,26.6,26.6,output/analysis/strict_timing_extended_paired_summary.csv strict_growth_down_5pp,,12,11,4,1
+Table A6,"object 12, row 11, cell 5, token 1",numeric,statistic,MATCH,16.0,16.0,16.0,16.0,output/analysis/strict_timing_extended_paired_summary.csv strict_growth_down_5pp,,12,11,5,1
+Table A6,"object 12, row 12, cell 1, token 1",numeric,design_label,STRUCTURAL,5,,,Growth+5pp,,"Fixed design, year, window, model name, code or label",12,12,1,1
+Table A6,"object 12, row 12, cell 2, token 1",numeric,statistic,MATCH,-1.16,-1.15625,-1.16,-1.16,output/analysis/strict_timing_extended_paired_summary.csv strict_growth_up_5pp,,12,12,2,1
+Table A6,"object 12, row 12, cell 3, token 1",numeric,statistic,MATCH,1.91,1.90625,1.91,1.91,output/analysis/strict_timing_extended_paired_summary.csv strict_growth_up_5pp,,12,12,3,1
+Table A6,"object 12, row 12, cell 4, token 1",numeric,statistic,MATCH,23.4,23.4375,23.4,23.4,output/analysis/strict_timing_extended_paired_summary.csv strict_growth_up_5pp,,12,12,4,1
+Table A6,"object 12, row 12, cell 5, token 1",numeric,statistic,MATCH,14.0,14.0,14.0,14.0,output/analysis/strict_timing_extended_paired_summary.csv strict_growth_up_5pp,,12,12,5,1
+Table A6,"object 12, row 13, cell 2, token 1",numeric,statistic,MATCH,-13.97,-13.96875,-13.97,-13.97,output/analysis/strict_timing_extended_paired_summary.csv strict_improved,,12,13,2,1
+Table A6,"object 12, row 13, cell 3, token 1",numeric,statistic,MATCH,14.91,14.90625,14.91,14.91,output/analysis/strict_timing_extended_paired_summary.csv strict_improved,,12,13,3,1
+Table A6,"object 12, row 13, cell 4, token 1",numeric,statistic,MATCH,73.4,73.4375,73.4,73.4,output/analysis/strict_timing_extended_paired_summary.csv strict_improved,,12,13,4,1
+Table A6,"object 12, row 13, cell 5, token 1",numeric,statistic,MATCH,85.0,85.0,85.0,85.0,output/analysis/strict_timing_extended_paired_summary.csv strict_improved,,12,13,5,1
+Table A6,"object 12, row 14, cell 2, token 1",numeric,statistic,MATCH,-2.09,-2.09375,-2.09,-2.09,output/analysis/strict_timing_extended_paired_summary.csv strict_json,,12,14,2,1
+Table A6,"object 12, row 14, cell 3, token 1",numeric,statistic,MATCH,8.72,8.71875,8.72,8.72,output/analysis/strict_timing_extended_paired_summary.csv strict_json,,12,14,3,1
+Table A6,"object 12, row 14, cell 4, token 1",numeric,statistic,MATCH,50.0,50.0,50.0,50.0,output/analysis/strict_timing_extended_paired_summary.csv strict_json,,12,14,4,1
+Table A6,"object 12, row 14, cell 5, token 1",numeric,statistic,MATCH,55.0,55.0,55.0,55.0,output/analysis/strict_timing_extended_paired_summary.csv strict_json,,12,14,5,1
+Table A6,"object 12, row 15, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,Lev-2pp,,"Fixed design, year, window, model name, code or label",12,15,1,1
+Table A6,"object 12, row 15, cell 2, token 1",numeric,statistic,MATCH,-1.20,-1.203125,-1.20,-1.20,output/analysis/strict_timing_extended_paired_summary.csv strict_lev_down_2pp,,12,15,2,1
+Table A6,"object 12, row 15, cell 3, token 1",numeric,statistic,MATCH,1.52,1.515625,1.52,1.52,output/analysis/strict_timing_extended_paired_summary.csv strict_lev_down_2pp,,12,15,3,1
+Table A6,"object 12, row 15, cell 4, token 1",numeric,statistic,MATCH,17.2,17.1875,17.2,17.2,output/analysis/strict_timing_extended_paired_summary.csv strict_lev_down_2pp,,12,15,4,1
+Table A6,"object 12, row 15, cell 5, token 1",numeric,statistic,MATCH,20.0,20.0,20.0,20.0,output/analysis/strict_timing_extended_paired_summary.csv strict_lev_down_2pp,,12,15,5,1
+Table A6,"object 12, row 16, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,Lev+2pp,,"Fixed design, year, window, model name, code or label",12,16,1,1
+Table A6,"object 12, row 16, cell 2, token 1",numeric,statistic,MATCH,0.41,0.40625,0.41,0.41,output/analysis/strict_timing_extended_paired_summary.csv strict_lev_up_2pp,,12,16,2,1
+Table A6,"object 12, row 16, cell 3, token 1",numeric,statistic,MATCH,1.16,1.15625,1.16,1.16,output/analysis/strict_timing_extended_paired_summary.csv strict_lev_up_2pp,,12,16,3,1
+Table A6,"object 12, row 16, cell 4, token 1",numeric,statistic,MATCH,17.2,17.1875,17.2,17.2,output/analysis/strict_timing_extended_paired_summary.csv strict_lev_up_2pp,,12,16,4,1
+Table A6,"object 12, row 16, cell 5, token 1",numeric,statistic,MATCH,20.0,20.0,20.0,20.0,output/analysis/strict_timing_extended_paired_summary.csv strict_lev_up_2pp,,12,16,5,1
+Table A6,"object 12, row 17, cell 2, token 1",numeric,statistic,MATCH,2.81,2.8125,2.81,2.81,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_after,,12,17,2,1
+Table A6,"object 12, row 17, cell 3, token 1",numeric,statistic,MATCH,3.19,3.1875,3.19,3.19,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_after,,12,17,3,1
+Table A6,"object 12, row 17, cell 4, token 1",numeric,statistic,MATCH,25.0,25.0,25.0,25.0,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_after,,12,17,4,1
+Table A6,"object 12, row 17, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_after,,12,17,5,1
+Table A6,"object 12, row 18, cell 2, token 1",numeric,statistic,MATCH,-6.05,-6.046875,-6.05,-6.05,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_before,,12,18,2,1
+Table A6,"object 12, row 18, cell 3, token 1",numeric,statistic,MATCH,6.98,6.984375,6.98,6.98,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_before,,12,18,3,1
+Table A6,"object 12, row 18, cell 4, token 1",numeric,statistic,MATCH,54.7,54.6875,54.7,54.7,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_before,,12,18,4,1
+Table A6,"object 12, row 18, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_before,,12,18,5,1
+Table A6,"object 12, row 19, cell 2, token 1",numeric,statistic,MATCH,-3.14,-3.140625,-3.14,-3.14,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_system,,12,19,2,1
+Table A6,"object 12, row 19, cell 3, token 1",numeric,statistic,MATCH,5.08,5.078125,5.08,5.08,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_system,,12,19,3,1
+Table A6,"object 12, row 19, cell 4, token 1",numeric,statistic,MATCH,50.0,50.0,50.0,50.0,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_system,,12,19,4,1
+Table A6,"object 12, row 19, cell 5, token 1",numeric,statistic,MATCH,30.0,30.0,30.0,30.0,output/analysis/strict_timing_extended_paired_summary.csv strict_neutral_system,,12,19,5,1
+Table A6,"object 12, row 20, cell 1, token 1",numeric,design_label,STRUCTURAL,3,,,Precision 3dp,,"Fixed design, year, window, model name, code or label",12,20,1,1
+Table A6,"object 12, row 20, cell 2, token 1",numeric,statistic,MATCH,-0.25,-0.25,-0.25,-0.25,output/analysis/strict_timing_extended_paired_summary.csv strict_precision_trailing_zero,,12,20,2,1
+Table A6,"object 12, row 20, cell 3, token 1",numeric,statistic,MATCH,1.94,1.9375,1.94,1.94,output/analysis/strict_timing_extended_paired_summary.csv strict_precision_trailing_zero,,12,20,3,1
+Table A6,"object 12, row 20, cell 4, token 1",numeric,statistic,MATCH,20.3,20.3125,20.3,20.3,output/analysis/strict_timing_extended_paired_summary.csv strict_precision_trailing_zero,,12,20,4,1
+Table A6,"object 12, row 20, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_precision_trailing_zero,,12,20,5,1
+Table A6,"object 12, row 21, cell 1, token 1",numeric,design_label,STRUCTURAL,1,,,Order 1,,"Fixed design, year, window, model name, code or label",12,21,1,1
+Table A6,"object 12, row 21, cell 2, token 1",numeric,statistic,MATCH,-9.91,-9.90625,-9.91,-9.91,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_01,,12,21,2,1
+Table A6,"object 12, row 21, cell 3, token 1",numeric,statistic,MATCH,11.22,11.21875,11.22,11.22,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_01,,12,21,3,1
+Table A6,"object 12, row 21, cell 4, token 1",numeric,statistic,MATCH,60.9,60.9375,60.9,60.9,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_01,,12,21,4,1
+Table A6,"object 12, row 21, cell 5, token 1",numeric,statistic,MATCH,85.0,85.0,85.0,85.0,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_01,,12,21,5,1
+Table A6,"object 12, row 22, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,Order 2,,"Fixed design, year, window, model name, code or label",12,22,1,1
+Table A6,"object 12, row 22, cell 2, token 1",numeric,statistic,MATCH,-2.66,-2.65625,-2.66,-2.66,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_02,,12,22,2,1
+Table A6,"object 12, row 22, cell 3, token 1",numeric,statistic,MATCH,6.72,6.71875,6.72,6.72,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_02,,12,22,3,1
+Table A6,"object 12, row 22, cell 4, token 1",numeric,statistic,MATCH,50.0,50.0,50.0,50.0,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_02,,12,22,4,1
+Table A6,"object 12, row 22, cell 5, token 1",numeric,statistic,MATCH,36.0,36.0,36.0,36.0,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_02,,12,22,5,1
+Table A6,"object 12, row 23, cell 1, token 1",numeric,design_label,STRUCTURAL,3,,,Order 3,,"Fixed design, year, window, model name, code or label",12,23,1,1
+Table A6,"object 12, row 23, cell 2, token 1",numeric,statistic,MATCH,-8.53,-8.53125,-8.53,-8.53,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_03,,12,23,2,1
+Table A6,"object 12, row 23, cell 3, token 1",numeric,statistic,MATCH,9.50,9.5,9.50,9.50,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_03,,12,23,3,1
+Table A6,"object 12, row 23, cell 4, token 1",numeric,statistic,MATCH,65.6,65.625,65.6,65.6,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_03,,12,23,4,1
+Table A6,"object 12, row 23, cell 5, token 1",numeric,statistic,MATCH,40.0,40.0,40.0,40.0,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_03,,12,23,5,1
+Table A6,"object 12, row 24, cell 1, token 1",numeric,design_label,STRUCTURAL,4,,,Order 4,,"Fixed design, year, window, model name, code or label",12,24,1,1
+Table A6,"object 12, row 24, cell 2, token 1",numeric,statistic,MATCH,-8.44,-8.4375,-8.44,-8.44,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_04,,12,24,2,1
+Table A6,"object 12, row 24, cell 3, token 1",numeric,statistic,MISMATCH,8.62,8.625,8.63,8.62,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_04,"Exact halfway case: the manuscript uses Python/native round-to-even formatting, while the requested decimal half-up verification rounds away from zero. Same observations and underlying value. Replacement applies only if half-up is the chosen manuscript convention; this is not a substantive statistical error.",12,24,3,1
+Table A6,"object 12, row 24, cell 4, token 1",numeric,statistic,MATCH,57.8,57.8125,57.8,57.8,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_04,,12,24,4,1
+Table A6,"object 12, row 24, cell 5, token 1",numeric,statistic,MATCH,45.0,45.0,45.0,45.0,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_04,,12,24,5,1
+Table A6,"object 12, row 25, cell 1, token 1",numeric,design_label,STRUCTURAL,5,,,Order 5,,"Fixed design, year, window, model name, code or label",12,25,1,1
+Table A6,"object 12, row 25, cell 2, token 1",numeric,statistic,MATCH,-6.38,-6.375,-6.38,-6.38,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_05,,12,25,2,1
+Table A6,"object 12, row 25, cell 3, token 1",numeric,statistic,MATCH,11.00,11.0,11.00,11.00,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_05,,12,25,3,1
+Table A6,"object 12, row 25, cell 4, token 1",numeric,statistic,MATCH,76.6,76.5625,76.6,76.6,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_05,,12,25,4,1
+Table A6,"object 12, row 25, cell 5, token 1",numeric,statistic,MATCH,45.0,45.0,45.0,45.0,output/analysis/strict_timing_extended_paired_summary.csv strict_random_order_05,,12,25,5,1
+Table A6,"object 12, row 26, cell 1, token 1",numeric,design_label,STRUCTURAL,1,,,ROA-1pp,,"Fixed design, year, window, model name, code or label",12,26,1,1
+Table A6,"object 12, row 26, cell 2, token 1",numeric,statistic,MATCH,-0.31,-0.3125,-0.31,-0.31,output/analysis/strict_timing_extended_paired_summary.csv strict_roa_down_1pp,,12,26,2,1
+Table A6,"object 12, row 26, cell 3, token 1",numeric,statistic,MATCH,1.69,1.6875,1.69,1.69,output/analysis/strict_timing_extended_paired_summary.csv strict_roa_down_1pp,,12,26,3,1
+Table A6,"object 12, row 26, cell 4, token 1",numeric,statistic,MATCH,18.8,18.75,18.8,18.8,output/analysis/strict_timing_extended_paired_summary.csv strict_roa_down_1pp,,12,26,4,1
+Table A6,"object 12, row 26, cell 5, token 1",numeric,statistic,MATCH,14.0,14.0,14.0,14.0,output/analysis/strict_timing_extended_paired_summary.csv strict_roa_down_1pp,,12,26,5,1
+Table A6,"object 12, row 27, cell 1, token 1",numeric,design_label,STRUCTURAL,1,,,ROA+1pp,,"Fixed design, year, window, model name, code or label",12,27,1,1
+Table A6,"object 12, row 27, cell 2, token 1",numeric,statistic,MATCH,0.61,0.609375,0.61,0.61,output/analysis/strict_timing_extended_paired_summary.csv strict_roa_up_1pp,,12,27,2,1
+Table A6,"object 12, row 27, cell 3, token 1",numeric,statistic,MATCH,2.20,2.203125,2.20,2.20,output/analysis/strict_timing_extended_paired_summary.csv strict_roa_up_1pp,,12,27,3,1
+Table A6,"object 12, row 27, cell 4, token 1",numeric,statistic,MATCH,26.6,26.5625,26.6,26.6,output/analysis/strict_timing_extended_paired_summary.csv strict_roa_up_1pp,,12,27,4,1
+Table A6,"object 12, row 27, cell 5, token 1",numeric,statistic,MATCH,20.0,20.0,20.0,20.0,output/analysis/strict_timing_extended_paired_summary.csv strict_roa_up_1pp,,12,27,5,1
+Table A6,"object 12, row 28, cell 2, token 1",numeric,statistic,MATCH,4.94,4.9375,4.94,4.94,output/analysis/strict_timing_extended_paired_summary.csv strict_sentences,,12,28,2,1
+Table A6,"object 12, row 28, cell 3, token 1",numeric,statistic,MATCH,6.19,6.1875,6.19,6.19,output/analysis/strict_timing_extended_paired_summary.csv strict_sentences,,12,28,3,1
+Table A6,"object 12, row 28, cell 4, token 1",numeric,statistic,MISMATCH,56.2,56.25,56.3,56.2,output/analysis/strict_timing_extended_paired_summary.csv strict_sentences,"Exact halfway case: the manuscript uses Python/native round-to-even formatting, while the requested decimal half-up verification rounds away from zero. Same observations and underlying value. Replacement applies only if half-up is the chosen manuscript convention; this is not a substantive statistical error.",12,28,4,1
+Table A6,"object 12, row 28, cell 5, token 1",numeric,statistic,MATCH,30.0,30.0,30.0,30.0,output/analysis/strict_timing_extended_paired_summary.csv strict_sentences,,12,28,5,1
+Table A6,"object 12, row 29, cell 2, token 1",numeric,statistic,MATCH,-1.80,-1.796875,-1.80,-1.80,output/analysis/strict_timing_extended_paired_summary.csv strict_signed_language,,12,29,2,1
+Table A6,"object 12, row 29, cell 3, token 1",numeric,statistic,MATCH,2.86,2.859375,2.86,2.86,output/analysis/strict_timing_extended_paired_summary.csv strict_signed_language,,12,29,3,1
+Table A6,"object 12, row 29, cell 4, token 1",numeric,statistic,MISMATCH,31.2,31.25,31.3,31.2,output/analysis/strict_timing_extended_paired_summary.csv strict_signed_language,"Exact halfway case: the manuscript uses Python/native round-to-even formatting, while the requested decimal half-up verification rounds away from zero. Same observations and underlying value. Replacement applies only if half-up is the chosen manuscript convention; this is not a substantive statistical error.",12,29,4,1
+Table A6,"object 12, row 29, cell 5, token 1",numeric,statistic,MATCH,30.0,30.0,30.0,30.0,output/analysis/strict_timing_extended_paired_summary.csv strict_signed_language,,12,29,5,1
+Table A6,"object 12, row 30, cell 2, token 1",numeric,statistic,MATCH,-2.73,-2.734375,-2.73,-2.73,output/analysis/strict_timing_extended_paired_summary.csv strict_table,,12,30,2,1
+Table A6,"object 12, row 30, cell 3, token 1",numeric,statistic,MATCH,4.30,4.296875,4.30,4.30,output/analysis/strict_timing_extended_paired_summary.csv strict_table,,12,30,3,1
+Table A6,"object 12, row 30, cell 4, token 1",numeric,statistic,MATCH,39.1,39.0625,39.1,39.1,output/analysis/strict_timing_extended_paired_summary.csv strict_table,,12,30,4,1
+Table A6,"object 12, row 30, cell 5, token 1",numeric,statistic,MATCH,30.0,30.0,30.0,30.0,output/analysis/strict_timing_extended_paired_summary.csv strict_table,,12,30,5,1
+Table A6,"object 12, row 31, cell 2, token 1",numeric,statistic,MATCH,12.27,12.265625,12.27,12.27,output/analysis/strict_timing_extended_paired_summary.csv strict_unit_basis_points,,12,31,2,1
+Table A6,"object 12, row 31, cell 3, token 1",numeric,statistic,MATCH,14.02,14.015625,14.02,14.02,output/analysis/strict_timing_extended_paired_summary.csv strict_unit_basis_points,,12,31,3,1
+Table A6,"object 12, row 31, cell 4, token 1",numeric,statistic,MATCH,76.6,76.5625,76.6,76.6,output/analysis/strict_timing_extended_paired_summary.csv strict_unit_basis_points,,12,31,4,1
+Table A6,"object 12, row 31, cell 5, token 1",numeric,statistic,MATCH,75.0,75.0,75.0,75.0,output/analysis/strict_timing_extended_paired_summary.csv strict_unit_basis_points,,12,31,5,1

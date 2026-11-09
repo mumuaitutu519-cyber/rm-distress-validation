@@ -1,0 +1,29 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table 6,"object 6, row 2, cell 1, token 1",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B 4-bit,,"Fixed design, year, window, model name, code or label",6,2,1,1
+Table 6,"object 6, row 2, cell 1, token 2",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B 4-bit,,"Fixed design, year, window, model name, code or label",6,2,1,2
+Table 6,"object 6, row 2, cell 2, token 1",numeric,statistic,MATCH,0.814,0.8144531250000001,0.814,0.814,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B 4-bit,,6,2,2,1
+Table 6,"object 6, row 2, cell 3, token 1",numeric,statistic,MATCH,16.0,16.0,16.0,16.0,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B 4-bit,,6,2,3,1
+Table 6,"object 6, row 2, cell 4, token 1",numeric,statistic,MATCH,19.1,19.09375,19.1,19.1,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B 4-bit,,6,2,4,1
+Table 6,"object 6, row 2, cell 5, token 1",numeric,statistic,MATCH,87.5,87.5,87.5,87.5%,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B 4-bit,,6,2,5,1
+Table 6,"object 6, row 2, cell 6, token 1",numeric,statistic,MATCH,50.0,50.0,50.0,50.0,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B 4-bit,,6,2,6,1
+Table 6,"object 6, row 3, cell 1, token 1",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B bfloat16,,"Fixed design, year, window, model name, code or label",6,3,1,1
+Table 6,"object 6, row 3, cell 2, token 1",numeric,statistic,MATCH,0.827,0.8268229166666666,0.827,0.827,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B bfloat16,,6,3,2,1
+Table 6,"object 6, row 3, cell 3, token 1",numeric,statistic,MATCH,14.0,14.0,14.0,14.0,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B bfloat16,,6,3,3,1
+Table 6,"object 6, row 3, cell 4, token 1",numeric,statistic,MATCH,14.8,14.7875,14.8,14.8,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B bfloat16,,6,3,4,1
+Table 6,"object 6, row 3, cell 5, token 1",numeric,statistic,MATCH,87.5,87.5,87.5,87.5%,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B bfloat16,,6,3,5,1
+Table 6,"object 6, row 3, cell 6, token 1",numeric,statistic,MATCH,60.0,60.0,60.0,60.0,output/analysis/strict_timing_artifact_profiles.csv Qwen3-4B bfloat16,,6,3,6,1
+Table 6,"object 6, row 4, cell 1, token 1",numeric,design_label,STRUCTURAL,8,,,Qwen3-8B 4-bit,,"Fixed design, year, window, model name, code or label",6,4,1,1
+Table 6,"object 6, row 4, cell 1, token 2",numeric,design_label,STRUCTURAL,4,,,Qwen3-8B 4-bit,,"Fixed design, year, window, model name, code or label",6,4,1,2
+Table 6,"object 6, row 4, cell 2, token 1",numeric,statistic,MATCH,0.841,0.8411458333333333,0.841,0.841,output/analysis/strict_timing_artifact_profiles.csv Qwen3-8B 4-bit,,6,4,2,1
+Table 6,"object 6, row 4, cell 3, token 1",numeric,statistic,MATCH,4.0,4.0,4.0,4.0,output/analysis/strict_timing_artifact_profiles.csv Qwen3-8B 4-bit,,6,4,3,1
+Table 6,"object 6, row 4, cell 4, token 1",numeric,statistic,MATCH,7.1,7.075,7.1,7.1,output/analysis/strict_timing_artifact_profiles.csv Qwen3-8B 4-bit,,6,4,4,1
+Table 6,"object 6, row 4, cell 5, token 1",numeric,statistic,MATCH,64.1,64.0625,64.1,64.1%,output/analysis/strict_timing_artifact_profiles.csv Qwen3-8B 4-bit,,6,4,5,1
+Table 6,"object 6, row 4, cell 6, token 1",numeric,statistic,MATCH,40.0,40.0,40.0,40.0,output/analysis/strict_timing_artifact_profiles.csv Qwen3-8B 4-bit,,6,4,6,1
+Table 6,"object 6, row 5, cell 1, token 1",numeric,design_label,STRUCTURAL,12,,,Mistral-NeMo-12B 4-bit,,"Fixed design, year, window, model name, code or label",6,5,1,1
+Table 6,"object 6, row 5, cell 1, token 2",numeric,design_label,STRUCTURAL,4,,,Mistral-NeMo-12B 4-bit,,"Fixed design, year, window, model name, code or label",6,5,1,2
+Table 6,"object 6, row 5, cell 2, token 1",numeric,statistic,MATCH,0.853,0.8528645833333333,0.853,0.853,output/analysis/strict_timing_artifact_profiles.csv Mistral-NeMo-12B 4-bit,,6,5,2,1
+Table 6,"object 6, row 5, cell 3, token 1",numeric,statistic,MATCH,0.0,0.0,0.0,0.0,output/analysis/strict_timing_artifact_profiles.csv Mistral-NeMo-12B 4-bit,,6,5,3,1
+Table 6,"object 6, row 5, cell 4, token 1",numeric,statistic,MATCH,6.6,6.5625,6.6,6.6,output/analysis/strict_timing_artifact_profiles.csv Mistral-NeMo-12B 4-bit,,6,5,4,1
+Table 6,"object 6, row 5, cell 5, token 1",numeric,statistic,MATCH,46.9,46.875,46.9,46.9%,output/analysis/strict_timing_artifact_profiles.csv Mistral-NeMo-12B 4-bit,,6,5,5,1
+Table 6,"object 6, row 5, cell 6, token 1",numeric,statistic,MATCH,37.0,37.0,37.0,37.0,output/analysis/strict_timing_artifact_profiles.csv Mistral-NeMo-12B 4-bit,,6,5,6,1
+Table 6,"paragraph 124, table note, token 1",numeric,statistic,MATCH,64,64.0,64,"Notes. All configurations receive the same 64 cases, three representations, prompt, batch size one, and temperature zero. AUC is the baseline-representation ROC-AUC. Median, Mean, and Maximum are the within-firm range across the three representations in raw-score points. Changed is the share of firms whose score changes across representations, in percent.",output/analysis/strict_timing_information_factorial_panel.parquet,,,,,1

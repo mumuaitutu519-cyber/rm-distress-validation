@@ -1,8 +1,16 @@
 # Files omitted from the public edition
 
-Source: private sun21 review package. Each path below is omitted or replaced; no restricted observation values are included in this inventory.
+342 aggregate release. Each excluded source path is listed below. No restricted observation values appear in this inventory. Public results retain original values; no inference or statistical calculation was rerun. The source private checkout and manuscript are unchanged.
 
-The public tree follows the old public ZIP code/schema scope and adds unchanged sun21 code and the author-supplied PDF. Restricted review access may be requested from the corresponding author, subject to database permissions.
+CSV rule: at most 500 data rows, with no stkcd/code/firm/case_id/prompt/response-like column names. The rule is conservative: aggregate `firms` counts and `reason_code` categories are excluded too. Company/call records, prompt text, replies, individual predictions, bootstrap draw rows and all Parquet files are excluded. Bootstrap means and confidence limits are aggregate statistics, not draw rows. Aggregate model performance, score means and calibration bins are not individual predictions.
+
+## Filtered source artifacts
+
+- `verify/VERIFICATION_sun21.csv`: original 793-row CSV excluded; [table partitions](verify/VERIFICATION_sun21/) retain 787 original records with identical fields. Six introductory individual-case score/probability records are excluded. All 766 table records are retained.
+- `verify/MISMATCH_REPORT_sun21.md`: public excerpt excludes three individual-case probability rows and one related bullet. All other source lines retain their original text, figures and numbering; the public notice identifies the omission.
+- `output/tables/Table_A7_object_13.csv`: prompt wording excluded. Table A7 has no numerical statistics; the verification partition contains structural labels only.
+
+## Excluded whole source files
 
 | Source path | Reason |
 |---|---|
@@ -19,17 +27,17 @@ The public tree follows the old public ZIP code/schema scope and adds unchanged 
 | `data/calls/strict_timing_information_factorial_missing_qwen3_4b_4bit.csv` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
 | `data/calls/strict_timing_primary_qwen3_4b_4bit.csv` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
 | `data/calls/strict_timing_probability_qwen3_4b_4bit.csv` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/derived/strict_timing_complete_candidates_2011_2024.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/derived/strict_timing_nested_cases_64.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/derived/strict_timing_panel_2011_2024.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/derived/strict_timing_primary_cases_256.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/derived/strict_timing_probability_cases_1500.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/derived/strict_timing_st_changes.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/frozen_draws/strict_timing_primary_bootstrap_draws.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/frozen_draws/strict_timing_probability_bootstrap_draws.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/frozen_draws/strict_timing_temporal_bootstrap_draws.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/strict_timing_benchmark_holdout_predictions.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `data/strict_timing_prelandmark_regulatory_features.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
+| `data/derived/strict_timing_complete_candidates_2011_2024.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/derived/strict_timing_nested_cases_64.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/derived/strict_timing_panel_2011_2024.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/derived/strict_timing_primary_cases_256.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/derived/strict_timing_probability_cases_1500.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/derived/strict_timing_st_changes.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/frozen_draws/strict_timing_primary_bootstrap_draws.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/frozen_draws/strict_timing_probability_bootstrap_draws.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/frozen_draws/strict_timing_temporal_bootstrap_draws.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/strict_timing_benchmark_holdout_predictions.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `data/strict_timing_prelandmark_regulatory_features.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
 | `data/strict_timing_regulatory_event_linkage.csv` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
 | `logs/README.md` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `logs/clean_environment_install.log` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
@@ -39,118 +47,43 @@ The public tree follows the old public ZIP code/schema scope and adds unchanged 
 | `logs/clean_run_sun21.log` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `logs/post_run_checks.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `logs/post_run_checks.log` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/DATA_DICTIONARY.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/screening_workload.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_annual_frame.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_artifact_case_ranges.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_artifact_profiles.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_artifact_variant_metrics.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_auc_difference_ci.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_batch_sensitivity.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_benchmark_holdout_predictions.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_calibration_coefficients.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_calibration_robustness.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_core_mistral_nemo_12b_4bit_batch1.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_core_qwen3_4b_4bit_batch1.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_core_qwen3_4b_4bit_batch1_reload.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_core_qwen3_4b_fp16_batch1.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_core_qwen3_8b_4bit_batch1.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_descriptives.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_economic_response.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_extended_paired_summary.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_extended_qwen3_4b_4bit.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_forward_time_historical_bss.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_information_factorial_missing_qwen3_4b_4bit.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_information_factorial_panel.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_information_fe_coefficients.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_information_margins.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_order_case_metrics.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_order_summary.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_output_precision.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_prelandmark_regulatory_features.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_primary_bootstrap_ci.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_primary_bootstrap_draws.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_primary_case_ranges.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_primary_metrics.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_primary_qwen3_4b_4bit.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_primary_range_summary.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_primary_rosters.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_probability_bootstrap_ci.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_probability_bootstrap_draws.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_probability_metrics.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_probability_periods.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_probability_predictions.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_probability_qwen3_4b_4bit.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_quantization_sensitivity.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_regulatory_event_linkage.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_regulatory_signal_validation.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_reliability_bins.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_reload_repeatability.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_sample_summary.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_status_reason_decomposition.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_temporal_bootstrap_ci.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_temporal_bootstrap_draws.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/analysis/strict_timing_threshold_crossing_curve.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/strict_timing_washout_risksets.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/analysis/sun21_independent_capacity_bootstrap_draws.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
+| `output/analysis/DATA_DICTIONARY.csv` | Schema inventory, not aggregate statistics; the existing data/DATA_DICTIONARY.csv remains available. |
+| `output/analysis/strict_timing_annual_frame.csv` | Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_artifact_case_ranges.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_benchmark_holdout_predictions.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_core_mistral_nemo_12b_4bit_batch1.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_core_qwen3_4b_4bit_batch1.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_core_qwen3_4b_4bit_batch1_reload.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_core_qwen3_4b_fp16_batch1.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_core_qwen3_8b_4bit_batch1.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_extended_qwen3_4b_4bit.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 1920 data rows, above the 500-row release limit. |
+| `output/analysis/strict_timing_information_factorial_missing_qwen3_4b_4bit.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 1152 data rows, above the 500-row release limit. |
+| `output/analysis/strict_timing_information_factorial_panel.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_order_case_metrics.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_prelandmark_regulatory_features.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_primary_bootstrap_draws.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_primary_case_ranges.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_primary_qwen3_4b_4bit.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 768 data rows, above the 500-row release limit. |
+| `output/analysis/strict_timing_probability_bootstrap_draws.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_probability_predictions.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_probability_qwen3_4b_4bit.csv` | Conservative column-name rule: case_id; omit even when a column denotes an aggregate count or category. CSV has 4500 data rows, above the 500-row release limit. |
+| `output/analysis/strict_timing_regulatory_event_linkage.csv` | Conservative column-name rule: firm_id; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_sample_summary.csv` | Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_status_reason_decomposition.csv` | Conservative column-name rule: reason_code; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/strict_timing_temporal_bootstrap_draws.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/analysis/strict_timing_washout_risksets.csv` | Conservative column-name rule: firms; omit even when a column denotes an aggregate count or category. |
+| `output/analysis/sun21_independent_capacity_bootstrap_draws.csv` | CSV has 6000 data rows, above the 500-row release limit. Individual bootstrap draw rows are restricted; interval summaries are allowed. |
 | `output/analysis/supplement_values_sun21.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `output/bootstrap_mode.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `output/computed_cells.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_annual_regime.pdf` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_annual_regime.png` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_artifact_profiles.pdf` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_artifact_profiles.png` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_reliability.pdf` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_reliability.png` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_representation_range.pdf` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_representation_range.png` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_threshold_crossing.pdf` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/figures/strict_timing/figure_threshold_crossing.png` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `output/logs/strict_timing_analysis.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `output/logs/strict_timing_artifact_analysis.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `output/logs/strict_timing_exhibits.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `output/logs/strict_timing_extended_analysis.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `output/logs/strict_timing_regulatory_validation.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `output/logs/strict_timing_tables.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/model_calls.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `output/tables/Table_1_object_1.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_2_object_2.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_3_object_3.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_4_object_4.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_5_object_5.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_6_object_6.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A10_object_16.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A11_object_17.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A12_object_18.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A13_object_19.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A1_object_7.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A2_object_8.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A3_object_9.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A4_object_10.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A5_object_11.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A6_object_12.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A7_object_13.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A8_object_14.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/Table_A9_object_15.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/table1_sample.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/table2_performance.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/table3_stability.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/table4_behavior.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/table5_artifacts.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/table6_temporal.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA10_economic.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA11_precision.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA1_descriptives.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA2_annual.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA3_extended.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA4_temporal.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA5_calibration.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA6_washout.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA7_auc_differences.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA8_implementation.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/tableA9_information.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/table_regulatory_signal_validation.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `output/tables/table_status_reason_decomposition.tex` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
+| `output/model_calls.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `output/tables/Table_A7_object_13.csv` | Contains actual unsupported-text prompt templates; Table A7 has no numerical statistics. |
 | `public/README.md` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `raw_rebuild/inference_logs/anonymous_reproducibility_manifest.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `raw_rebuild/inference_logs/strict_timing_analysis.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
@@ -176,33 +109,30 @@ The public tree follows the old public ZIP code/schema scope and adds unchanged 
 | `raw_rebuild/inference_logs/strict_timing_robustness.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `raw_rebuild/inference_logs/strict_timing_submission_validation.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `raw_rebuild/inference_logs/strict_timing_tables.json` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `raw_rebuild/strict_timing_extended_prompts_64.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `raw_rebuild/strict_timing_information_factorial_missing_prompts.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `raw_rebuild/strict_timing_nested_core_prompts_64.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `raw_rebuild/strict_timing_primary_prompts_256.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
-| `raw_rebuild/strict_timing_probability_prompts_1500.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
+| `raw_rebuild/strict_timing_extended_prompts_64.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `raw_rebuild/strict_timing_information_factorial_missing_prompts.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `raw_rebuild/strict_timing_nested_core_prompts_64.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `raw_rebuild/strict_timing_primary_prompts_256.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
+| `raw_rebuild/strict_timing_probability_prompts_1500.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
 | `verify/BUILD_AUDIT.md` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/DATA_PROVENANCE.csv` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/FIGURE_VERIFICATION.csv` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
-| `verify/FIGURE_VERIFICATION_sun21.csv` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/INTRO_EXAMPLE_sun21.json` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/LIMITATIONS.md` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/MISMATCH_CONTEXT.csv` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/MISMATCH_REPORT.md` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
-| `verify/MISMATCH_REPORT_sun21.md` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/SECURITY_SCAN_sun21.json` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/VERIFICATION_SUMMARY.md` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
-| `verify/VERIFICATION_SUMMARY_sun21.md` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
-| `verify/VERIFICATION_sun21.csv` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
+| `verify/VERIFICATION_sun21.csv` | CSV has 793 data rows, above the 500-row release limit. Also contains six individual-example score/probability records. Publish unchanged eligible records by table instead. |
 | `verify/benchmark_refit_comparison.csv` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 | `verify/figures/manuscript_vintage_strict_timing_annual_frame.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `verify/figures/manuscript_vintage_strict_timing_artifact_profiles.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `verify/figures/manuscript_vintage_strict_timing_primary_case_ranges.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
+| `verify/figures/manuscript_vintage_strict_timing_primary_case_ranges.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
 | `verify/figures/manuscript_vintage_strict_timing_reliability_bins.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `verify/figures/manuscript_vintage_strict_timing_threshold_crossing_curve.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `verify/figures/recomputed_strict_timing_annual_frame.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `verify/figures/recomputed_strict_timing_artifact_profiles.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
-| `verify/figures/recomputed_strict_timing_primary_case_ranges.parquet` | Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed. |
+| `verify/figures/recomputed_strict_timing_primary_case_ranges.parquet` | Parquet is excluded without exception; restricted observation, prediction, prompt, case or draw material is not redistributed. |
 | `verify/figures/recomputed_strict_timing_reliability_bins.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `verify/figures/recomputed_strict_timing_threshold_crossing_curve.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `verify/legacy_sun15/BUILD_AUDIT.md` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
@@ -269,4 +199,4 @@ The public tree follows the old public ZIP code/schema scope and adds unchanged 
 | `verify/source_results/strict_timing_yearly_sample.csv` | Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition. |
 | `verify/verification_status_sun21.json` | Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation. |
 
-`README.md` and `README_한국어.md` are replaced with public-edition explanations. Private `DATA_REVIEW.json`, `EXCLUDED_FILES.md`, `MANIFEST.csv` and `CHECKSUMS.sha256` are replaced with public-edition inventories. No private `.git` content was copied.
+`README.md` and `README_한국어.md` are public-edition explanations. Private review/inventory files are replaced by public inventories. Existing analysis/rebuild source code and the previously published manuscript PDF are retained unchanged. References to restricted input paths are not data exports. Authorized review access may be requested from the corresponding author. No private `.git` content was copied.

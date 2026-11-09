@@ -1,0 +1,5 @@
+result,metric,bootstrap_draws,bootstrap_mean,ci_lower,ci_upper
+primary,canonical_auc,1000,0.7648023274739583,0.6867655436197916,0.8418406168619791
+primary,canonical_pr_auc,1000,0.6213982698675542,0.5263599543844171,0.7178470217308464
+primary,median_representation_range_pp,1000,18.129,14.4875,20.0
+primary,mean_representation_range_pp,1000,19.45866015625,17.609375,21.32470703125

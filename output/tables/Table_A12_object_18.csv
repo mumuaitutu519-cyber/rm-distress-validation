@@ -1,0 +1,13 @@
+replication_mode,bootstrap_policy,row,column,row_label,manuscript_text,recomputed_values,source,coverage
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",1,1,,,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",1,2,,Difference,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",1,3,,Positive,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",2,1,Qwen minus logit,Qwen minus logit,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",2,2,Qwen minus logit,-0.063,-0.0625121605416776,output/analysis/strict_timing_auc_difference_ci.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",2,3,Qwen minus logit,0.0,0.0,output/analysis/strict_timing_auc_difference_ci.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",3,1,Qwen minus histogram boosting,Qwen minus histogram boosting,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",3,2,Qwen minus histogram boosting,-0.057,-0.0565618900533183,output/analysis/strict_timing_auc_difference_ci.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",3,3,Qwen minus histogram boosting,0.0,0.0,output/analysis/strict_timing_auc_difference_ci.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",4,1,Qwen minus XGBoost,Qwen minus XGBoost,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",4,2,Qwen minus XGBoost,-0.066,-0.066419675668302,output/analysis/strict_timing_auc_difference_ci.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",4,3,Qwen minus XGBoost,0.0,0.0,output/analysis/strict_timing_auc_difference_ci.csv,mapped

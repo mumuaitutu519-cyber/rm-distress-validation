@@ -1,0 +1,11 @@
+\begin{table}[!htbp]\centering
+\caption{Paired Design-Weighted AUC Contrasts}\label{tab:a_auc_diff}
+\begin{tabular}{lrrr}\toprule
+Contrast & Mean difference & 95\% bootstrap CI & Positive draws (\%) \\
+\midrule
+Qwen minus logit & -0.063 & [-0.081, -0.043] & 0.0 \\
+Qwen minus histogram boosting & -0.057 & [-0.079, -0.033] & 0.0 \\
+Qwen minus XGBoost & -0.066 & [-0.087, -0.046] & 0.0 \\
+\bottomrule\end{tabular}
+\begin{minipage}{0.92\textwidth}\footnotesize\textit{Notes:} The same 1,500 sampled records and design weights enter both members of each contrast. Intervals use 1,000 firm-cluster bootstrap draws.\end{minipage}
+\end{table}

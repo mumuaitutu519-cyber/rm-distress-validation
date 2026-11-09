@@ -1,0 +1,10 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table A7,"object 13, row 2, cell 1, token 1",numeric,design_label,STRUCTURAL,1,,,Favorable 1,,"Fixed design, year, window, model name, code or label",13,2,1,1
+Table A7,"object 13, row 3, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,Favorable 2,,"Fixed design, year, window, model name, code or label",13,3,1,1
+Table A7,"object 13, row 4, cell 1, token 1",numeric,design_label,STRUCTURAL,3,,,Favorable 3,,"Fixed design, year, window, model name, code or label",13,4,1,1
+Table A7,"object 13, row 5, cell 1, token 1",numeric,design_label,STRUCTURAL,1,,,Neutral 1,,"Fixed design, year, window, model name, code or label",13,5,1,1
+Table A7,"object 13, row 6, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,Neutral 2,,"Fixed design, year, window, model name, code or label",13,6,1,1
+Table A7,"object 13, row 7, cell 1, token 1",numeric,design_label,STRUCTURAL,3,,,Neutral 3,,"Fixed design, year, window, model name, code or label",13,7,1,1
+Table A7,"object 13, row 8, cell 1, token 1",numeric,design_label,STRUCTURAL,1,,,Adverse 1,,"Fixed design, year, window, model name, code or label",13,8,1,1
+Table A7,"object 13, row 9, cell 1, token 1",numeric,design_label,STRUCTURAL,2,,,Adverse 2,,"Fixed design, year, window, model name, code or label",13,9,1,1
+Table A7,"object 13, row 10, cell 1, token 1",numeric,design_label,STRUCTURAL,3,,,Adverse 3,,"Fixed design, year, window, model name, code or label",13,10,1,1

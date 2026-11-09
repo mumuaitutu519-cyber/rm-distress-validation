@@ -1,0 +1,5 @@
+artifact,cases,events,parse_rate,canonical_auc,canonical_pr_auc,median_representation_range_pp,mean_representation_range_pp,any_representation_change_rate,maximum_representation_range_pp
+Qwen3-4B 4-bit,64,16,1.0,0.8144531250000001,0.7705142262708051,16.0,19.09375,0.875,50.0
+Qwen3-4B bfloat16,64,16,1.0,0.8268229166666666,0.7984532828282829,14.0,14.7875,0.875,60.0
+Qwen3-8B 4-bit,64,16,1.0,0.8411458333333333,0.6356060606060606,4.0,7.075,0.640625,40.0
+Mistral-NeMo-12B 4-bit,64,16,1.0,0.8528645833333333,0.7054924242424242,0.0,6.5625,0.46875,37.0

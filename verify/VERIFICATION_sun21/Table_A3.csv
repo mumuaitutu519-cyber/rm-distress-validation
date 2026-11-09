@@ -1,0 +1,37 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table A3,"object 9, row 2, cell 1, token 1",numeric,design_label,STRUCTURAL,2019,,,2019,,"Fixed design, year, window, model name, code or label",9,2,1,1
+Table A3,"object 9, row 2, cell 2, token 1",numeric,statistic,MATCH,3382,3382.0,3382,3382,output/analysis/strict_timing_annual_frame.csv,,9,2,2,1
+Table A3,"object 9, row 2, cell 3, token 1",numeric,statistic,MATCH,71,71.0,71,71,output/analysis/strict_timing_annual_frame.csv,,9,2,3,1
+Table A3,"object 9, row 2, cell 4, token 1",numeric,statistic,MATCH,2.10,2.09934949733885,2.10,2.10,output/analysis/strict_timing_annual_frame.csv,,9,2,4,1
+Table A3,"object 9, row 2, cell 5, token 1",numeric,statistic,MATCH,0.764,0.7637665315359387,0.764,0.764,output/analysis/strict_timing_annual_frame.csv,,9,2,5,1
+Table A3,"object 9, row 2, cell 6, token 1",numeric,statistic,MATCH,0.787,0.7870882802098,0.787,0.787,output/analysis/strict_timing_annual_frame.csv,,9,2,6,1
+Table A3,"object 9, row 3, cell 1, token 1",numeric,design_label,STRUCTURAL,2020,,,2020,,"Fixed design, year, window, model name, code or label",9,3,1,1
+Table A3,"object 9, row 3, cell 2, token 1",numeric,statistic,MATCH,3723,3723.0,3723,3723,output/analysis/strict_timing_annual_frame.csv,,9,3,2,1
+Table A3,"object 9, row 3, cell 3, token 1",numeric,statistic,MATCH,46,46.0,46,46,output/analysis/strict_timing_annual_frame.csv,,9,3,3,1
+Table A3,"object 9, row 3, cell 4, token 1",numeric,statistic,MATCH,1.24,1.23556271823798,1.24,1.24,output/analysis/strict_timing_annual_frame.csv,,9,3,4,1
+Table A3,"object 9, row 3, cell 5, token 1",numeric,statistic,MATCH,0.791,0.7913173546487566,0.791,0.791,output/analysis/strict_timing_annual_frame.csv,,9,3,5,1
+Table A3,"object 9, row 3, cell 6, token 1",numeric,statistic,MATCH,0.776,0.7760727672606449,0.776,0.776,output/analysis/strict_timing_annual_frame.csv,,9,3,6,1
+Table A3,"object 9, row 4, cell 1, token 1",numeric,design_label,STRUCTURAL,2021,,,2021,,"Fixed design, year, window, model name, code or label",9,4,1,1
+Table A3,"object 9, row 4, cell 2, token 1",numeric,statistic,MATCH,4214,4214.0,4214,4214,output/analysis/strict_timing_annual_frame.csv,,9,4,2,1
+Table A3,"object 9, row 4, cell 3, token 1",numeric,statistic,MATCH,57,57.0,57,57,output/analysis/strict_timing_annual_frame.csv,,9,4,3,1
+Table A3,"object 9, row 4, cell 4, token 1",numeric,statistic,MATCH,1.35,1.35263407688656,1.35,1.35,output/analysis/strict_timing_annual_frame.csv,,9,4,4,1
+Table A3,"object 9, row 4, cell 5, token 1",numeric,statistic,MATCH,0.853,0.852753124089994,0.853,0.853,output/analysis/strict_timing_annual_frame.csv,,9,4,5,1
+Table A3,"object 9, row 4, cell 6, token 1",numeric,statistic,MATCH,0.866,0.8664628253337215,0.866,0.866,output/analysis/strict_timing_annual_frame.csv,,9,4,6,1
+Table A3,"object 9, row 5, cell 1, token 1",numeric,design_label,STRUCTURAL,2022,,,2022,,"Fixed design, year, window, model name, code or label",9,5,1,1
+Table A3,"object 9, row 5, cell 2, token 1",numeric,statistic,MATCH,4554,4554.0,4554,4554,output/analysis/strict_timing_annual_frame.csv,,9,5,2,1
+Table A3,"object 9, row 5, cell 3, token 1",numeric,statistic,MATCH,72,72.0,72,72,output/analysis/strict_timing_annual_frame.csv,,9,5,3,1
+Table A3,"object 9, row 5, cell 4, token 1",numeric,statistic,MATCH,1.58,1.58102766798418,1.58,1.58,output/analysis/strict_timing_annual_frame.csv,,9,5,4,1
+Table A3,"object 9, row 5, cell 5, token 1",numeric,statistic,MATCH,0.816,0.815555431602955,0.816,0.816,output/analysis/strict_timing_annual_frame.csv,,9,5,5,1
+Table A3,"object 9, row 5, cell 6, token 1",numeric,statistic,MATCH,0.847,0.8470672814715653,0.847,0.847,output/analysis/strict_timing_annual_frame.csv,,9,5,6,1
+Table A3,"object 9, row 6, cell 1, token 1",numeric,design_label,STRUCTURAL,2023,,,2023,,"Fixed design, year, window, model name, code or label",9,6,1,1
+Table A3,"object 9, row 6, cell 2, token 1",numeric,statistic,MATCH,4751,4751.0,4751,4751,output/analysis/strict_timing_annual_frame.csv,,9,6,2,1
+Table A3,"object 9, row 6, cell 3, token 1",numeric,statistic,MATCH,109,109.0,109,109,output/analysis/strict_timing_annual_frame.csv,,9,6,3,1
+Table A3,"object 9, row 6, cell 4, token 1",numeric,statistic,MATCH,2.29,2.2942538412965603,2.29,2.29,output/analysis/strict_timing_annual_frame.csv,,9,6,4,1
+Table A3,"object 9, row 6, cell 5, token 1",numeric,statistic,MATCH,0.827,0.8265675582732847,0.827,0.827,output/analysis/strict_timing_annual_frame.csv,,9,6,5,1
+Table A3,"object 9, row 6, cell 6, token 1",numeric,statistic,MATCH,0.822,0.8221088663934004,0.822,0.822,output/analysis/strict_timing_annual_frame.csv,,9,6,6,1
+Table A3,"object 9, row 7, cell 1, token 1",numeric,design_label,STRUCTURAL,2024,,,2024,,"Fixed design, year, window, model name, code or label",9,7,1,1
+Table A3,"object 9, row 7, cell 2, token 1",numeric,statistic,MATCH,4766,4766.0,4766,4766,output/analysis/strict_timing_annual_frame.csv,,9,7,2,1
+Table A3,"object 9, row 7, cell 3, token 1",numeric,statistic,MATCH,119,119.0,119,119,output/analysis/strict_timing_annual_frame.csv,,9,7,3,1
+Table A3,"object 9, row 7, cell 4, token 1",numeric,statistic,MATCH,2.50,2.49685270667226,2.50,2.50,output/analysis/strict_timing_annual_frame.csv,,9,7,4,1
+Table A3,"object 9, row 7, cell 5, token 1",numeric,statistic,MATCH,0.792,0.792315635098455,0.792,0.792,output/analysis/strict_timing_annual_frame.csv,,9,7,5,1
+Table A3,"object 9, row 7, cell 6, token 1",numeric,statistic,MATCH,0.796,0.7964919989945624,0.796,0.796,output/analysis/strict_timing_annual_frame.csv,,9,7,6,1

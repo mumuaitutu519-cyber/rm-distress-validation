@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\caption{Representation and Action Stability}
+\label{tab:stability}
+\begin{threeparttable}
+\begin{tabular}{lrr}
+\toprule
+Diagnostic & Estimate & Reference \\
+\midrule
+Raw score range, median & 20.0 pp [14.5, 20.0] & 256-firm audit \\
+Raw score range, mean & 19.4 pp & 256-firm audit \\
+Any raw score change & 85.2\% & 256-firm audit \\
+1\% calibrated-threshold crossing & 48.8\% [45.6\%, 53.9\%] & Weighted frame \\
+2\% calibrated-threshold crossing & 17.3\% [13.5\%, 24.1\%] & Weighted frame \\
+5\% roster intersection / union & 5 / 20 & $k=13$ per representation \\
+5\% roster Jaccard overlap & 0.250 & Enriched audit \\
+10\% roster intersection / union & 18 / 34 & $k=26$ per representation \\
+10\% roster Jaccard overlap & 0.529 & Enriched audit \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item Notes: Equivalent representations are canonical bullets, reversed feature order, and decimal rather than percentage units. Threshold rates use design weights and a common canonical Platt map. Roster analyses are stress tests within the deliberately event-enriched 256-firm audit; they are not estimates for the full holdout population. Fixed case identifiers break ties and enforce exact top-$k$ capacity.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}[!htbp]
+\centering
+\caption{Target-Aligned Profiles of Four Frozen Artifacts}
+\label{tab:artifacts}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Artifact & Canonical AUC & Median range & Mean range & Any change & Maximum range \\
+\midrule
+Qwen3-4B 4-bit & 0.814 & 16.0 & 19.1 & 87.5\% & 50.0 \\
+Qwen3-4B bfloat16 & 0.827 & 14.0 & 14.8 & 87.5\% & 60.0 \\
+Qwen3-8B 4-bit & 0.841 & 4.0 & 7.1 & 64.1\% & 40.0 \\
+Mistral-NeMo-12B 4-bit & 0.853 & 0.0 & 6.6 & 46.9\% & 37.0 \\
+\bottomrule
+\end{tabular}}
+\begin{minipage}{\textwidth}\footnotesize
+\textit{Notes:} All artifacts receive the same 64 cases, three representations, prompt, batch size one, and temperature zero. AUC values are descriptive within an event-enriched sample. Model family, parameter count, tokenizer, and quantization are not separately identified; rows are artifact profiles, not causal size effects.
+\end{minipage}
+\end{table}

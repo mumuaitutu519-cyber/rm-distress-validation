@@ -1,0 +1,44 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table A2,"object 8, row 2, cell 1, token 1",numeric,design_label,STRUCTURAL,0,,,0,,"Fixed design, year, window, model name, code or label",8,2,1,1
+Table A2,"object 8, row 2, cell 3, token 1",numeric,statistic,MATCH,"20,758",20758.0,20758,"20,758",output/analysis/strict_timing_washout_risksets.csv,,8,2,3,1
+Table A2,"object 8, row 2, cell 4, token 1",numeric,statistic,MATCH,"3,506",3506.0,3506,"3,506",output/analysis/strict_timing_washout_risksets.csv,,8,2,4,1
+Table A2,"object 8, row 2, cell 5, token 1",numeric,statistic,MATCH,439,439.0,439,439,output/analysis/strict_timing_washout_risksets.csv,,8,2,5,1
+Table A2,"object 8, row 2, cell 6, token 1",numeric,statistic,MATCH,2.11,2.11484728779265,2.11,2.11,output/analysis/strict_timing_washout_risksets.csv,,8,2,6,1
+Table A2,"object 8, row 2, cell 7, token 1",numeric,statistic,MATCH,452,452.0,452,452,output/analysis/strict_timing_washout_risksets.csv,,8,2,7,1
+Table A2,"object 8, row 2, cell 8, token 1",numeric,statistic,MATCH,2.18,2.17747374506214,2.18,2.18,output/analysis/strict_timing_washout_risksets.csv,,8,2,8,1
+Table A2,"object 8, row 3, cell 1, token 1",numeric,design_label,STRUCTURAL,0,,,0,,"Fixed design, year, window, model name, code or label",8,3,1,1
+Table A2,"object 8, row 3, cell 3, token 1",numeric,statistic,MATCH,"25,679",25679.0,25679,"25,679",output/analysis/strict_timing_washout_risksets.csv,,8,3,3,1
+Table A2,"object 8, row 3, cell 4, token 1",numeric,statistic,MATCH,"5,095",5095.0,5095,"5,095",output/analysis/strict_timing_washout_risksets.csv,,8,3,4,1
+Table A2,"object 8, row 3, cell 5, token 1",numeric,statistic,MATCH,588,588.0,588,588,output/analysis/strict_timing_washout_risksets.csv,,8,3,5,1
+Table A2,"object 8, row 3, cell 6, token 1",numeric,statistic,MATCH,2.29,2.2898087931773,2.29,2.29,output/analysis/strict_timing_washout_risksets.csv,,8,3,6,1
+Table A2,"object 8, row 3, cell 7, token 1",numeric,statistic,MATCH,601,601.0,601,601,output/analysis/strict_timing_washout_risksets.csv,,8,3,7,1
+Table A2,"object 8, row 3, cell 8, token 1",numeric,statistic,MATCH,2.34,2.34043381751625,2.34,2.34,output/analysis/strict_timing_washout_risksets.csv,,8,3,8,1
+Table A2,"object 8, row 4, cell 1, token 1",numeric,design_label,STRUCTURAL,7,,,7,,"Fixed design, year, window, model name, code or label",8,4,1,1
+Table A2,"object 8, row 4, cell 3, token 1",numeric,statistic,MATCH,"20,508",20508.0,20508,"20,508",output/analysis/strict_timing_washout_risksets.csv,,8,4,3,1
+Table A2,"object 8, row 4, cell 4, token 1",numeric,statistic,MATCH,"3,503",3503.0,3503,"3,503",output/analysis/strict_timing_washout_risksets.csv,,8,4,4,1
+Table A2,"object 8, row 4, cell 5, token 1",numeric,statistic,MATCH,251,251.0,251,251,output/analysis/strict_timing_washout_risksets.csv,,8,4,5,1
+Table A2,"object 8, row 4, cell 6, token 1",numeric,statistic,MATCH,1.22,1.22391261946557,1.22,1.22,output/analysis/strict_timing_washout_risksets.csv,,8,4,6,1
+Table A2,"object 8, row 4, cell 7, token 1",numeric,statistic,MATCH,264,264.0,264,264,output/analysis/strict_timing_washout_risksets.csv,,8,4,7,1
+Table A2,"object 8, row 4, cell 8, token 1",numeric,statistic,MATCH,1.29,1.28730251609128,1.29,1.29,output/analysis/strict_timing_washout_risksets.csv,,8,4,8,1
+Table A2,"object 8, row 5, cell 1, token 1",numeric,design_label,STRUCTURAL,7,,,7,,"Fixed design, year, window, model name, code or label",8,5,1,1
+Table A2,"object 8, row 5, cell 3, token 1",numeric,statistic,MATCH,"25,285",25285.0,25285,"25,285",output/analysis/strict_timing_washout_risksets.csv,,8,5,3,1
+Table A2,"object 8, row 5, cell 4, token 1",numeric,statistic,MATCH,"5,067",5067.0,5067,"5,067",output/analysis/strict_timing_washout_risksets.csv,,8,5,4,1
+Table A2,"object 8, row 5, cell 5, token 1",numeric,statistic,MATCH,368,368.0,368,368,output/analysis/strict_timing_washout_risksets.csv,,8,5,5,1
+Table A2,"object 8, row 5, cell 6, token 1",numeric,statistic,MATCH,1.46,1.45540834486849,1.46,1.46,output/analysis/strict_timing_washout_risksets.csv,,8,5,6,1
+Table A2,"object 8, row 5, cell 7, token 1",numeric,statistic,MATCH,382,382.0,382,382,output/analysis/strict_timing_washout_risksets.csv,,8,5,7,1
+Table A2,"object 8, row 5, cell 8, token 1",numeric,statistic,MATCH,1.51,1.51077714059719,1.51,1.51,output/analysis/strict_timing_washout_risksets.csv,,8,5,8,1
+Table A2,"object 8, row 6, cell 1, token 1",numeric,design_label,STRUCTURAL,30,,,30,,"Fixed design, year, window, model name, code or label",8,6,1,1
+Table A2,"object 8, row 6, cell 3, token 1",numeric,statistic,MATCH,"20,668",20668.0,20668,"20,668",output/analysis/strict_timing_washout_risksets.csv,,8,6,3,1
+Table A2,"object 8, row 6, cell 4, token 1",numeric,statistic,MATCH,"3,504",3504.0,3504,"3,504",output/analysis/strict_timing_washout_risksets.csv,,8,6,4,1
+Table A2,"object 8, row 6, cell 5, token 1",numeric,statistic,MATCH,346,346.0,346,346,output/analysis/strict_timing_washout_risksets.csv,,8,6,5,1
+Table A2,"object 8, row 6, cell 6, token 1",numeric,statistic,MATCH,1.67,1.6740855428681998,1.67,1.67,output/analysis/strict_timing_washout_risksets.csv,,8,6,6,1
+Table A2,"object 8, row 6, cell 7, token 1",numeric,statistic,MATCH,359,359.0,359,359,output/analysis/strict_timing_washout_risksets.csv,,8,6,7,1
+Table A2,"object 8, row 6, cell 8, token 1",numeric,statistic,MATCH,1.74,1.7369847106638199,1.74,1.74,output/analysis/strict_timing_washout_risksets.csv,,8,6,8,1
+Table A2,"object 8, row 7, cell 1, token 1",numeric,design_label,STRUCTURAL,30,,,30,,"Fixed design, year, window, model name, code or label",8,7,1,1
+Table A2,"object 8, row 7, cell 3, token 1",numeric,statistic,MATCH,"25,390",25390.0,25390,"25,390",output/analysis/strict_timing_washout_risksets.csv,,8,7,3,1
+Table A2,"object 8, row 7, cell 4, token 1",numeric,statistic,MATCH,"5,067",5067.0,5067,"5,067",output/analysis/strict_timing_washout_risksets.csv,,8,7,4,1
+Table A2,"object 8, row 7, cell 5, token 1",numeric,statistic,MATCH,474,474.0,474,474,output/analysis/strict_timing_washout_risksets.csv,,8,7,5,1
+Table A2,"object 8, row 7, cell 6, token 1",numeric,statistic,MATCH,1.87,1.86687672311933,1.87,1.87,output/analysis/strict_timing_washout_risksets.csv,,8,7,6,1
+Table A2,"object 8, row 7, cell 7, token 1",numeric,statistic,MATCH,487,487.0,487,487,output/analysis/strict_timing_washout_risksets.csv,,8,7,7,1
+Table A2,"object 8, row 7, cell 8, token 1",numeric,statistic,MATCH,1.92,1.9180779834580501,1.92,1.92,output/analysis/strict_timing_washout_risksets.csv,,8,7,8,1
+Table A2,"paragraph 277, table note, token 1",numeric,design_label,STRUCTURAL,30,,,"Notes. Each row rebuilds eligibility at its own scoring date. The zero- and seven-day rows are not conditional on surviving the 30-day risk set. The composite adds transitions to trading-warning and direct-delisting states. Changing the scoring date changes both who remains normal and the end of the one-year window, so these rows describe alternative targets rather than a parameter perturbation on a fixed cohort. Rows are waiting-period lengths in days. Period distinguishes the training and holdout frames. Records and Firms are the numbers of records and firms. Events and the first Rate refer to ST/*ST transitions. Composite and the second Rate add trading-warning and direct-delisting transitions. Rates are in percent.",,"Year, cross-reference, fixed design, capacity, confidence level or number of bootstrap draws",,,,1

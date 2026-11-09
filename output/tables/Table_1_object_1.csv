@@ -1,0 +1,41 @@
+replication_mode,bootstrap_policy,row,column,row_label,manuscript_text,recomputed_values,source,coverage
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",1,1,,,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",1,2,,Records,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",1,3,,Events,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",1,4,,Rate,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",1,5,,Regime,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",2,1,2019,2019,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",2,2,2019,"3,382",3382.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",2,3,2019,71,71.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",2,4,2019,2.10,2.09934949733885,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",2,5,2019,pre-rule,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",3,1,2020,2020,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",3,2,2020,"3,723",3723.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",3,3,2020,46,46.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",3,4,2020,1.24,1.23556271823798,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",3,5,2020,pre-rule,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",4,1,2021,2021,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",4,2,2021,"4,214",4214.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",4,3,2021,57,57.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",4,4,2021,1.35,1.35263407688656,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",4,5,2021,pre-rule,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",5,1,2022,2022,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",5,2,2022,"4,554",4554.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",5,3,2022,72,72.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",5,4,2022,1.58,1.58102766798418,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",5,5,2022,pre-rule,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",6,1,2023,2023,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",6,2,2023,"4,751",4751.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",6,3,2023,109,109.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",6,4,2023,2.29,2.2942538412965603,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",6,5,2023,rule-exposed,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",7,1,2024,2024,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",7,2,2024,"4,766",4766.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",7,3,2024,119,119.0,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",7,4,2024,2.50,2.49685270667226,output/analysis/strict_timing_annual_frame.csv,mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",7,5,2024,rule-exposed,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",8,1,Total,Total,,,label or unverified; see VERIFICATION_sun21.csv
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",8,2,Total,"25,390",25390.0,output/analysis/strict_timing_annual_frame.csv (sum),mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",8,3,Total,474,474.0,output/analysis/strict_timing_annual_frame.csv (sum),mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",8,4,Total,1.87,1.8668767231193384,output/analysis/strict_timing_annual_frame.csv (sum),mapped
+quick,"RM: saved 1000 draws quick, regenerate full; sun21 new capacity intervals independently resampled and flagged unresolved",8,5,Total,—,,,label or unverified; see VERIFICATION_sun21.csv

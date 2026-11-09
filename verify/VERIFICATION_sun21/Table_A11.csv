@@ -1,0 +1,47 @@
+table,location,kind,scope,status,manuscript_value,recomputed_value,proposed_display_value,cell_text,source,reason,table_object,row,column,token
+Table A11,"object 17, row 2, cell 1, token 1",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B,,"Fixed design, year, window, model name, code or label",17,2,1,1
+Table A11,"object 17, row 2, cell 3, token 1",numeric,statistic,MATCH,1.88,1.88259675868401,1.88,1.88,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/intercept_only,,17,2,3,1
+Table A11,"object 17, row 2, cell 4, token 1",numeric,statistic,MATCH,0.0176,0.0175708918616234,0.0176,0.0176,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/intercept_only,,17,2,4,1
+Table A11,"object 17, row 2, cell 5, token 1",numeric,statistic,MATCH,0.041,0.0409029751383688,0.041,0.041,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/intercept_only,,17,2,5,1
+Table A11,"object 17, row 2, cell 6, token 1",numeric,statistic,MATCH,0.0829,0.0828866254921488,0.0829,0.0829,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/intercept_only,,17,2,6,1
+Table A11,"object 17, row 2, cell 7, token 1",numeric,statistic,MATCH,-0.838,-0.8384380102190474,-0.838,-0.838,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/intercept_only,,17,2,7,1
+Table A11,"object 17, row 2, cell 8, token 1",numeric,statistic,MATCH,0.743,0.742729493468023,0.743,0.743,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/intercept_only,,17,2,8,1
+Table A11,"object 17, row 3, cell 1, token 1",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B,,"Fixed design, year, window, model name, code or label",17,3,1,1
+Table A11,"object 17, row 3, cell 3, token 1",numeric,statistic,MATCH,1.89,1.88900506480867,1.89,1.89,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/platt,,17,3,3,1
+Table A11,"object 17, row 3, cell 4, token 1",numeric,statistic,MATCH,0.0174,0.0173794770862955,0.0174,0.0174,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/platt,,17,3,4,1
+Table A11,"object 17, row 3, cell 5, token 1",numeric,statistic,MATCH,0.051,0.0513512405410201,0.051,0.051,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/platt,,17,3,5,1
+Table A11,"object 17, row 3, cell 6, token 1",numeric,statistic,MATCH,0.0815,0.0814984730653909,0.0815,0.0815,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/platt,,17,3,6,1
+Table A11,"object 17, row 3, cell 7, token 1",numeric,statistic,MATCH,-0.087,-0.0873411362780642,-0.087,-0.087,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/platt,,17,3,7,1
+Table A11,"object 17, row 3, cell 8, token 1",numeric,statistic,MATCH,0.978,0.978016300065591,0.978,0.978,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/platt,,17,3,8,1
+Table A11,"object 17, row 4, cell 1, token 1",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B,,"Fixed design, year, window, model name, code or label",17,4,1,1
+Table A11,"object 17, row 4, cell 3, token 1",numeric,statistic,MATCH,1.90,1.8981468176285,1.90,1.90,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/beta,,17,4,3,1
+Table A11,"object 17, row 4, cell 4, token 1",numeric,statistic,MATCH,0.0175,0.0174728435633289,0.0175,0.0175,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/beta,,17,4,4,1
+Table A11,"object 17, row 4, cell 5, token 1",numeric,statistic,MATCH,0.046,0.0462548850998837,0.046,0.046,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/beta,,17,4,5,1
+Table A11,"object 17, row 4, cell 6, token 1",numeric,statistic,MATCH,0.0814,0.0813717015890539,0.0814,0.0814,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/beta,,17,4,6,1
+Table A11,"object 17, row 4, cell 7, token 1",numeric,statistic,MATCH,-0.141,-0.1413459447622004,-0.141,-0.141,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/beta,,17,4,7,1
+Table A11,"object 17, row 4, cell 8, token 1",numeric,statistic,MATCH,0.964,0.9640462498092872,0.964,0.964,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/beta,,17,4,8,1
+Table A11,"object 17, row 5, cell 1, token 1",numeric,design_label,STRUCTURAL,4,,,Qwen3-4B,,"Fixed design, year, window, model name, code or label",17,5,1,1
+Table A11,"object 17, row 5, cell 3, token 1",numeric,statistic,MATCH,1.96,1.9645627563707202,1.96,1.96,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/isotonic,,17,5,3,1
+Table A11,"object 17, row 5, cell 4, token 1",numeric,statistic,MATCH,0.0175,0.0175450670265261,0.0175,0.0175,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/isotonic,,17,5,4,1
+Table A11,"object 17, row 5, cell 5, token 1",numeric,statistic,MATCH,0.042,0.0423126089067835,0.042,0.042,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/isotonic,,17,5,5,1
+Table A11,"object 17, row 5, cell 6, token 1",numeric,statistic,MATCH,0.0812,0.0812234873900644,0.0812,0.0812,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/isotonic,,17,5,6,1
+Table A11,"object 17, row 5, cell 7, token 1",numeric,statistic,MATCH,-0.312,-0.3120008499125403,-0.312,-0.312,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/isotonic,,17,5,7,1
+Table A11,"object 17, row 5, cell 8, token 1",numeric,statistic,MATCH,0.923,0.9225899835499444,0.923,0.923,output/analysis/strict_timing_calibration_robustness.csv qwen_canonical_naive/isotonic,,17,5,8,1
+Table A11,"object 17, row 6, cell 3, token 1",numeric,statistic,MATCH,1.88,1.87577515175169,1.88,1.88,output/analysis/strict_timing_calibration_robustness.csv logit/platt,,17,6,3,1
+Table A11,"object 17, row 6, cell 4, token 1",numeric,statistic,MATCH,0.0174,0.0173562955669263,0.0174,0.0174,output/analysis/strict_timing_calibration_robustness.csv logit/platt,,17,6,4,1
+Table A11,"object 17, row 6, cell 5, token 1",numeric,statistic,MATCH,0.053,0.0526165904409501,0.053,0.053,output/analysis/strict_timing_calibration_robustness.csv logit/platt,,17,6,5,1
+Table A11,"object 17, row 6, cell 6, token 1",numeric,statistic,MATCH,0.0788,0.0788052692346506,0.0788,0.0788,output/analysis/strict_timing_calibration_robustness.csv logit/platt,,17,6,6,1
+Table A11,"object 17, row 6, cell 7, token 1",numeric,statistic,MATCH,-0.031,-0.0310275921175126,-0.031,-0.031,output/analysis/strict_timing_calibration_robustness.csv logit/platt,,17,6,7,1
+Table A11,"object 17, row 6, cell 8, token 1",numeric,statistic,MATCH,0.992,0.991949182179654,0.992,0.992,output/analysis/strict_timing_calibration_robustness.csv logit/platt,,17,6,8,1
+Table A11,"object 17, row 7, cell 3, token 1",numeric,statistic,MATCH,1.87,1.8741751922513101,1.87,1.87,output/analysis/strict_timing_calibration_robustness.csv hist_gradient_boosting/platt,,17,7,3,1
+Table A11,"object 17, row 7, cell 4, token 1",numeric,statistic,MATCH,0.0176,0.0175790163543265,0.0176,0.0176,output/analysis/strict_timing_calibration_robustness.csv hist_gradient_boosting/platt,,17,7,4,1
+Table A11,"object 17, row 7, cell 5, token 1",numeric,statistic,MATCH,0.040,0.0404595043776649,0.040,0.040,output/analysis/strict_timing_calibration_robustness.csv hist_gradient_boosting/platt,,17,7,5,1
+Table A11,"object 17, row 7, cell 6, token 1",numeric,statistic,MATCH,0.0796,0.0796033353344633,0.0796,0.0796,output/analysis/strict_timing_calibration_robustness.csv hist_gradient_boosting/platt,,17,7,6,1
+Table A11,"object 17, row 7, cell 7, token 1",numeric,statistic,MATCH,-0.025,-0.0253293793543064,-0.025,-0.025,output/analysis/strict_timing_calibration_robustness.csv hist_gradient_boosting/platt,,17,7,7,1
+Table A11,"object 17, row 7, cell 8, token 1",numeric,statistic,MATCH,0.994,0.9935413946354682,0.994,0.994,output/analysis/strict_timing_calibration_robustness.csv hist_gradient_boosting/platt,,17,7,8,1
+Table A11,"object 17, row 8, cell 3, token 1",numeric,statistic,MATCH,1.87,1.8739582263349,1.87,1.87,output/analysis/strict_timing_calibration_robustness.csv xgboost/platt,,17,8,3,1
+Table A11,"object 17, row 8, cell 4, token 1",numeric,statistic,MATCH,0.0173,0.0173483989649228,0.0173,0.0173,output/analysis/strict_timing_calibration_robustness.csv xgboost/platt,,17,8,4,1
+Table A11,"object 17, row 8, cell 5, token 1",numeric,statistic,MATCH,0.053,0.0530476219189,0.053,0.053,output/analysis/strict_timing_calibration_robustness.csv xgboost/platt,,17,8,5,1
+Table A11,"object 17, row 8, cell 6, token 1",numeric,statistic,MATCH,0.0785,0.0785252396318526,0.0785,0.0785,output/analysis/strict_timing_calibration_robustness.csv xgboost/platt,,17,8,6,1
+Table A11,"object 17, row 8, cell 7, token 1",numeric,statistic,MATCH,-0.027,-0.0265248185817793,-0.027,-0.027,output/analysis/strict_timing_calibration_robustness.csv xgboost/platt,,17,8,7,1
+Table A11,"object 17, row 8, cell 8, token 1",numeric,statistic,MATCH,0.993,0.9930151501192414,0.993,0.993,output/analysis/strict_timing_calibration_robustness.csv xgboost/platt,,17,8,8,1
