@@ -1,0 +1,1643 @@
+{
+  "manuscript": "2026.11.09 sun21",
+  "intended_visibility": "public",
+  "source_private_commit": "c906f2ea7266cccb15db9b34e5abd814c9b66f68",
+  "author": "Sun <316636681+mumuaitutu519-cyber@users.noreply.github.com>",
+  "source_reference_zip": "RM_Replication_20261106_public.zip",
+  "baseline_sha256": "6fe7ed7ee065ca0be2400510e3fb1dc5f68565cd423edad9991793b43d0ffd3a",
+  "policy": "Code and schema plus unchanged author-supplied manuscript PDF. No observation data, prompts, replies, scores, predictions, frozen draws, case audits, numerical output snapshots or logs.",
+  "retained_source_paths": [
+    ".gitignore",
+    "PACKAGE.json",
+    "PYTHON_VERSION.txt",
+    "README.md",
+    "README_한국어.md",
+    "TABLE_FIGURE_MAP.csv",
+    "TABLE_FIGURE_MAP_sun21.csv",
+    "code/39_analyze_strict_timing.py",
+    "code/40_bootstrap_strict_timing.py",
+    "code/42_analyze_strict_extended.py",
+    "code/43_analyze_strict_artifacts.py",
+    "code/44_build_strict_exhibits.py",
+    "code/45_export_strict_tables.py",
+    "code/46_strict_robustness.py",
+    "code/49_analyze_regulatory_validation.py",
+    "code/benchmark_models.py",
+    "code/export_tables.py",
+    "code/offline_exec.py",
+    "code/refit_benchmarks.py",
+    "code/rm_compute.py",
+    "code/rm_tables.py",
+    "code/security_scan.py",
+    "code/supplement_sun21.py",
+    "code/verify_figures.py",
+    "code/verify_package.py",
+    "code/verify_sun21.py",
+    "data/DATA_DICTIONARY.csv",
+    "data/benchmark_config.json",
+    "paper/RMSunChenRyu2026.11.09_sun21.pdf",
+    "raw_rebuild/07_run_revision_llm_audit.py",
+    "raw_rebuild/36_build_strict_timing_panel.py",
+    "raw_rebuild/37_prepare_strict_timing_audits.py",
+    "raw_rebuild/38_fit_strict_timing_benchmarks.py",
+    "raw_rebuild/41_build_information_factorial.py",
+    "raw_rebuild/48_audit_regulatory_data.py",
+    "raw_rebuild/53_target_definition_sensitivity.py",
+    "raw_rebuild/SOURCES.md",
+    "raw_rebuild/model_weight_metadata.json",
+    "raw_rebuild/run_all_sun15.py",
+    "raw_rebuild/verify_package_sun15.py",
+    "requirements.txt",
+    "run_all.py",
+    "run_all.sh"
+  ],
+  "excluded_source_paths": [
+    {
+      "path": "CHECKSUMS.sha256",
+      "category": "private_package_inventory",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": true
+    },
+    {
+      "path": "DATA_REVIEW.json",
+      "category": "private_package_inventory",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "EXCLUDED_FILES.md",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "MANIFEST.csv",
+      "category": "private_package_inventory",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": true
+    },
+    {
+      "path": "data/calls/strict_timing_core_mistral_nemo_12b_4bit_batch1.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/calls/strict_timing_core_qwen3_4b_4bit_batch1.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/calls/strict_timing_core_qwen3_4b_4bit_batch1_reload.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/calls/strict_timing_core_qwen3_4b_fp16_batch1.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/calls/strict_timing_core_qwen3_8b_4bit_batch1.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/calls/strict_timing_extended_qwen3_4b_4bit.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/calls/strict_timing_information_factorial_missing_qwen3_4b_4bit.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/calls/strict_timing_primary_qwen3_4b_4bit.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/calls/strict_timing_probability_qwen3_4b_4bit.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/derived/strict_timing_complete_candidates_2011_2024.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/derived/strict_timing_nested_cases_64.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/derived/strict_timing_panel_2011_2024.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/derived/strict_timing_primary_cases_256.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/derived/strict_timing_probability_cases_1500.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/derived/strict_timing_st_changes.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/frozen_draws/strict_timing_primary_bootstrap_draws.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/frozen_draws/strict_timing_probability_bootstrap_draws.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/frozen_draws/strict_timing_temporal_bootstrap_draws.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/strict_timing_benchmark_holdout_predictions.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/strict_timing_prelandmark_regulatory_features.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "data/strict_timing_regulatory_event_linkage.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "logs/README.md",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "logs/clean_environment_install.log",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "logs/clean_run.log",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "logs/clean_run_receipt.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "logs/clean_run_receipt_sun21.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "logs/clean_run_sun21.log",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "logs/post_run_checks.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "logs/post_run_checks.log",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/DATA_DICTIONARY.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/screening_workload.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_annual_frame.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_artifact_case_ranges.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_artifact_profiles.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_artifact_variant_metrics.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_auc_difference_ci.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_batch_sensitivity.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_benchmark_holdout_predictions.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_calibration_coefficients.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_calibration_robustness.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_core_mistral_nemo_12b_4bit_batch1.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_core_qwen3_4b_4bit_batch1.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_core_qwen3_4b_4bit_batch1_reload.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_core_qwen3_4b_fp16_batch1.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_core_qwen3_8b_4bit_batch1.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_descriptives.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_economic_response.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_extended_paired_summary.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_extended_qwen3_4b_4bit.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_forward_time_historical_bss.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_information_factorial_missing_qwen3_4b_4bit.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_information_factorial_panel.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_information_fe_coefficients.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_information_margins.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_order_case_metrics.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_order_summary.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_output_precision.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_prelandmark_regulatory_features.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_primary_bootstrap_ci.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_primary_bootstrap_draws.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_primary_case_ranges.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_primary_metrics.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_primary_qwen3_4b_4bit.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_primary_range_summary.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_primary_rosters.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_probability_bootstrap_ci.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_probability_bootstrap_draws.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_probability_metrics.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_probability_periods.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_probability_predictions.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_probability_qwen3_4b_4bit.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_quantization_sensitivity.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_regulatory_event_linkage.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_regulatory_signal_validation.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_reliability_bins.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_reload_repeatability.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_sample_summary.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_status_reason_decomposition.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_temporal_bootstrap_ci.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_temporal_bootstrap_draws.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_threshold_crossing_curve.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/strict_timing_washout_risksets.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/sun21_independent_capacity_bootstrap_draws.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/analysis/supplement_values_sun21.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/bootstrap_mode.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/computed_cells.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_annual_regime.pdf",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_annual_regime.png",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_artifact_profiles.pdf",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_artifact_profiles.png",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_reliability.pdf",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_reliability.png",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_representation_range.pdf",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_representation_range.png",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_threshold_crossing.pdf",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/figures/strict_timing/figure_threshold_crossing.png",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/logs/strict_timing_analysis.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/logs/strict_timing_artifact_analysis.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/logs/strict_timing_exhibits.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/logs/strict_timing_extended_analysis.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/logs/strict_timing_regulatory_validation.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/logs/strict_timing_tables.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/model_calls.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_1_object_1.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_2_object_2.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_3_object_3.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_4_object_4.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_5_object_5.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_6_object_6.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A10_object_16.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A11_object_17.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A12_object_18.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A13_object_19.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A1_object_7.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A2_object_8.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A3_object_9.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A4_object_10.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A5_object_11.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A6_object_12.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A7_object_13.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A8_object_14.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/Table_A9_object_15.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/table1_sample.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/table2_performance.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/table3_stability.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/table4_behavior.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/table5_artifacts.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/table6_temporal.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA10_economic.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA11_precision.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA1_descriptives.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA2_annual.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA3_extended.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA4_temporal.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA5_calibration.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA6_washout.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA7_auc_differences.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA8_implementation.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/tableA9_information.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/table_regulatory_signal_validation.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "output/tables/table_status_reason_decomposition.tex",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "public/README.md",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/anonymous_reproducibility_manifest.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_analysis.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_artifact_analysis.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_benchmarks.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_bootstrap.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_core_mistral_nemo_12b_4bit_batch1.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_core_qwen3_4b_4bit_batch1.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_core_qwen3_4b_4bit_batch1_reload.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_core_qwen3_4b_fp16_batch1.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_core_qwen3_8b_4bit_batch1.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_exhibits.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_extended_analysis.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_extended_qwen3_4b_4bit.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_information_factorial_build.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_information_factorial_missing_qwen3_4b_4bit.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_panel_build.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_primary_qwen3_4b_4bit.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_probability_qwen3_4b_4bit.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_prompt_build.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_regulatory_data_audit.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_regulatory_validation.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_robustness.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_submission_validation.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/inference_logs/strict_timing_tables.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/strict_timing_extended_prompts_64.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/strict_timing_information_factorial_missing_prompts.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/strict_timing_nested_core_prompts_64.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/strict_timing_primary_prompts_256.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "raw_rebuild/strict_timing_probability_prompts_1500.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/BUILD_AUDIT.md",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/DATA_PROVENANCE.csv",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/FIGURE_VERIFICATION.csv",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/FIGURE_VERIFICATION_sun21.csv",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/INTRO_EXAMPLE_sun21.json",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/LIMITATIONS.md",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/MISMATCH_CONTEXT.csv",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/MISMATCH_REPORT.md",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/MISMATCH_REPORT_sun21.md",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/SECURITY_SCAN_sun21.json",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/VERIFICATION_SUMMARY.md",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/VERIFICATION_SUMMARY_sun21.md",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/VERIFICATION_sun21.csv",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/benchmark_refit_comparison.csv",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/manuscript_vintage_strict_timing_annual_frame.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/manuscript_vintage_strict_timing_artifact_profiles.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/manuscript_vintage_strict_timing_primary_case_ranges.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/manuscript_vintage_strict_timing_reliability_bins.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/manuscript_vintage_strict_timing_threshold_crossing_curve.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/recomputed_strict_timing_annual_frame.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/recomputed_strict_timing_artifact_profiles.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/recomputed_strict_timing_primary_case_ranges.parquet",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/recomputed_strict_timing_reliability_bins.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/figures/recomputed_strict_timing_threshold_crossing_curve.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/BUILD_AUDIT.md",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/LIMITATIONS.md",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/MISMATCH_CONTEXT.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/MISMATCH_REPORT.md",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/VERIFICATION.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/VERIFICATION_SUMMARY.md",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/extracted_tables.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/logs/clean_environment_install.log",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/logs/clean_run.log",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/logs/clean_run_receipt.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/logs/post_run_checks.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/logs/post_run_checks.log",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/source.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/legacy_sun15/verification_status.json",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/blocks_sun21.json",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/extracted_tables_sun21.json",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/figures/image1.png",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/figures/image2.png",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/figures/image3.png",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/figures/image4.png",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/figures/image5.png",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/paragraphs_sun21.json",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/manuscript/source_sun21.json",
+      "category": "author_manuscript_and_extracted_content",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_annual_frame.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_artifact_profiles.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_artifact_variant_metrics.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_auc_difference_ci.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_batch_sensitivity.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_benchmark_metrics.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_calibration_coefficients.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_calibration_robustness.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_descriptives.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_economic_response.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_extended_paired_summary.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_forward_time_historical_bss.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_hgb_tuning.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_information_fe_coefficients.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_information_margins.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_logit_tuning.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_order_summary.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_outcome_robustness.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_output_precision.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_primary_bootstrap_ci.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_primary_metrics.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_primary_range_summary.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_primary_rosters.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_probability_bootstrap_ci.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_probability_metrics.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_probability_periods.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_quantization_sensitivity.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_regulatory_event_linkage.csv",
+      "category": "licensed_source_derived_observations_or_replies",
+      "reason": "Licensed-source observation-level data, prompts, replies, predictions, draws or case records; not publicly redistributed.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_regulatory_signal_validation.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_reliability_bins.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_reload_repeatability.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_sample_summary.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_status_reason_decomposition.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_target_definition_sensitivity.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_temporal_bootstrap_ci.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_threshold_crossing_curve.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_washout_risksets.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_xgboost_tuning.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/source_results/strict_timing_yearly_sample.csv",
+      "category": "licensed_source_aggregate_results_or_execution_evidence",
+      "reason": "Conservatively omit numerical result snapshots and execution evidence from the code-and-schema public edition.",
+      "public_baseline_path_present": false
+    },
+    {
+      "path": "verify/verification_status_sun21.json",
+      "category": "packaging_and_audit_documentation",
+      "reason": "Private audit/manuscript extraction or stale private inventory; omit or replace with public-edition documentation.",
+      "public_baseline_path_present": false
+    }
+  ],
+  "rewritten_source_paths": [
+    "README.md",
+    "README_한국어.md"
+  ],
+  "generated_public_documentation": [
+    "DATA_REVIEW.json",
+    "EXCLUDED_FILES.md",
+    "MANIFEST.csv",
+    "CHECKSUMS.sha256"
+  ],
+  "licensed_original_exports_distributed": false,
+  "licensed_company_level_derivatives_distributed": false,
+  "paper_sha256": "a9074cab5116099d0bd72cedab8301f412e7ec87bfabb833d4f2065d9801489b",
+  "model_inference_rerun": false,
+  "statistical_results_changed": false
+}

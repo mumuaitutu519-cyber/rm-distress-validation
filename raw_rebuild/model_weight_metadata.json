@@ -1,0 +1,105 @@
+[
+  {
+    "configuration": "qwen3_4b_4bit",
+    "repository": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+    "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+    "source_url": "https://huggingface.co/api/models/mlx-community/Qwen3-4B-Instruct-2507-4bit/revision/50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b?blobs=true",
+    "retrieved_utc": "2026-11-06T07:57:28.272313+00:00",
+    "status": "official pinned-revision metadata",
+    "weights": [
+      {
+        "file": "model.safetensors",
+        "size": 2263022417,
+        "lfs": {
+          "sha256": "2a73c6c248601ab904e035548abd8e6abb65ea27dcb5f342fb0a8910eb44173f",
+          "size": 2263022417,
+          "pointerSize": 135
+        }
+      }
+    ]
+  },
+  {
+    "configuration": "qwen3_8b_4bit",
+    "repository": "mlx-community/Qwen3-8B-4bit",
+    "revision": "545dc4251c05440727734bcd94334791f6ab0192",
+    "source_url": "https://huggingface.co/api/models/mlx-community/Qwen3-8B-4bit/revision/545dc4251c05440727734bcd94334791f6ab0192?blobs=true",
+    "retrieved_utc": "2026-11-06T07:57:28.271217+00:00",
+    "status": "official pinned-revision metadata",
+    "weights": [
+      {
+        "file": "model.safetensors",
+        "size": 4607835174,
+        "lfs": {
+          "sha256": "f2d29621aab300336ad645567ff38c42aac755513006ef4e8a579cf7ef5256d8",
+          "size": 4607835174,
+          "pointerSize": 135
+        }
+      }
+    ]
+  },
+  {
+    "configuration": "mistral_nemo_12b_4bit",
+    "repository": "mlx-community/Mistral-Nemo-Instruct-2407-4bit",
+    "revision": "647ca0751669b21a364c86ccc5df54c4d7e4e91c",
+    "source_url": "https://huggingface.co/api/models/mlx-community/Mistral-Nemo-Instruct-2407-4bit/revision/647ca0751669b21a364c86ccc5df54c4d7e4e91c?blobs=true",
+    "retrieved_utc": "2026-11-06T07:57:28.281918+00:00",
+    "status": "official pinned-revision metadata",
+    "weights": [
+      {
+        "file": "model-00001-of-00002.safetensors",
+        "size": 5356342924,
+        "lfs": {
+          "sha256": "6a9bf783b123d07f46da6241f3a5d52fa72a63bde4fd750c2b0665e59a7605ec",
+          "size": 5356342924,
+          "pointerSize": 135
+        }
+      },
+      {
+        "file": "model-00002-of-00002.safetensors",
+        "size": 1533736009,
+        "lfs": {
+          "sha256": "664ac7ffe37e529cb8304dc55376c038ef9c3b9cc9b5f9de805af82490aa755b",
+          "size": 1533736009,
+          "pointerSize": 135
+        }
+      }
+    ]
+  },
+  {
+    "configuration": "qwen3_4b_bfloat16",
+    "repository": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "source_url": "https://huggingface.co/api/models/Qwen/Qwen3-4B-Instruct-2507/revision/cdbee75f17c01a7cc42f958dc650907174af0554?blobs=true",
+    "retrieved_utc": "2026-11-06T07:57:28.271351+00:00",
+    "status": "official pinned-revision metadata",
+    "weights": [
+      {
+        "file": "model-00001-of-00003.safetensors",
+        "size": 3957900840,
+        "lfs": {
+          "sha256": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+          "size": 3957900840,
+          "pointerSize": 135
+        }
+      },
+      {
+        "file": "model-00002-of-00003.safetensors",
+        "size": 3987450520,
+        "lfs": {
+          "sha256": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+          "size": 3987450520,
+          "pointerSize": 135
+        }
+      },
+      {
+        "file": "model-00003-of-00003.safetensors",
+        "size": 99630640,
+        "lfs": {
+          "sha256": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d",
+          "size": 99630640,
+          "pointerSize": 133
+        }
+      }
+    ]
+  }
+]

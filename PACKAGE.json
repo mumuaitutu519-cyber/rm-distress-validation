@@ -1,0 +1,6 @@
+{
+  "name": "RM",
+  "manuscript": "2026.11.09 sun21",
+  "stages": ["code/rm_compute.py", "code/rm_tables.py", "code/verify_figures.py", "code/supplement_sun21.py", "code/verify_sun21.py"],
+  "inference_rerun": false
+}

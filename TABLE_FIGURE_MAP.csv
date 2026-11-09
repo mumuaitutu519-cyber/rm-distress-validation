@@ -1,0 +1,21 @@
+table_figure,scripts,data
+Table 1,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table 2,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table 3,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table 4,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table 5,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table 6,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A1,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A2,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A3,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A4,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A5,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A6,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A7,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A8,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A9,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A10,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A11,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A12,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Table A13,code/rm_compute.py; code/rm_tables.py,data/derived/; data/calls/; data/benchmark_config.json; data/frozen_draws/
+Figures 1–5 / appendix figure panels,code/rm_compute.py,data/derived/; calls/; frozen_draws/

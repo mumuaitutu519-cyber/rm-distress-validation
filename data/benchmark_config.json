@@ -1,0 +1,34 @@
+{
+  "seed": 20260814,
+  "selected_parameters": {
+    "logit": {
+      "C": 0.2
+    },
+    "hist_gradient_boosting": {
+      "max_iter": 200,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 50,
+      "l2_regularization": 0.0
+    },
+    "xgboost": {
+      "n_estimators": 200,
+      "max_depth": 2,
+      "learning_rate": 0.03,
+      "min_child_weight": 5.0,
+      "reg_lambda": 10.0
+    }
+  },
+  "selection_train": [
+    2011,
+    2016
+  ],
+  "selection_validation": [
+    2017,
+    2018
+  ],
+  "final_train": [
+    2011,
+    2018
+  ]
+}

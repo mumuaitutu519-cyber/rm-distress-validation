@@ -1,0 +1,25 @@
+sun21_label,old_sun15_label,sun21_object,old_object,caption,mapping_evidence,script,data
+Table 1,Table 1,1,1,Table 1. One-year holdout risk set,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table 2,Table 2,2,2,Table 2. Design-weighted ranking and probability quality,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table 3,Table 3,3,3,Table 3. Representation and action stability,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table 4,Table 4,4,4,Table 4. Screening workload and event capture,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table 5,Table 5,5,5,Table 5. Extended behavioral diagnostics on 64 firms,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table 6,Table 6,6,6,Table 6. Comparison of four fixed configurations,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A1,Table A1,7,7,Table A1. Input descriptives across samples,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A2,Table A2,8,8,Table A2. Independently rebuilt risk sets by waiting period,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A3,Table A3,9,9,Table A3. Annual holdout composition and structured-model ranking,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A4,Table A4,10,10,Table A4. Pre-scoring-date regulatory signals and subsequent ST/*ST outcomes,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A5,Table A5,11,11,Table A5. Direct status-file reasons for holdout outcomes,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A6,Table A6,12,12,Table A6. All extended variants relative to baseline,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A7,Table A7,13,13,Table A7. Unsupported-text wording templates,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A8,Table A8,14,14,Table A8. Information-factorial margins relative to baseline,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A9,Table A9,15,15,Table A9. Economic-response diagnostics and empirical support,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A10,Table A10,16,16,Table A10. Strict-design generation inventory,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A11,Table A11,17,17,Table A11. Alternative grouped cross-fit calibration maps,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A12,Table A12,18,18,Table A12. Paired design-weighted AUC contrasts,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Table A13,Table A13,19,19,Table A13. Repeatability and implementation-context diagnostics,All physical table cells exactly identical; verified from DOCX XML,code/rm_tables.py,data/; output/analysis/
+Figure 1,Figure 1,,,reliability,Matching caption and preserved statistical backing series; see FIGURE_VERIFICATION_sun21.csv,code/44_build_strict_exhibits.py,output/figures/strict_timing/figure_reliability.png
+Figure 2,Figure 2,,,representation_range,Matching caption and preserved statistical backing series; see FIGURE_VERIFICATION_sun21.csv,code/44_build_strict_exhibits.py,output/figures/strict_timing/figure_representation_range.png
+Figure 3,Figure 3,,,threshold_crossing,Matching caption and preserved statistical backing series; see FIGURE_VERIFICATION_sun21.csv,code/44_build_strict_exhibits.py,output/figures/strict_timing/figure_threshold_crossing.png
+Figure A1,Figure A1,,,annual_regime,Matching caption and preserved statistical backing series; see FIGURE_VERIFICATION_sun21.csv,code/44_build_strict_exhibits.py,output/figures/strict_timing/figure_annual_regime.png
+Figure A2,Figure A2,,,artifact_profiles,Matching caption and preserved statistical backing series; see FIGURE_VERIFICATION_sun21.csv,code/44_build_strict_exhibits.py,output/figures/strict_timing/figure_artifact_profiles.png
